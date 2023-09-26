@@ -1,0 +1,44 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--dark);
+	color: var(--light);
+}
+
+#heading {
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		margin: 0 auto;
+		width: 50%;
+		text-align: center;
+
+		ul {
+			list-style: none;
+		}
+
+		li {
+			display: inline-block;
+			margin-right: 30px;
+		}
+
+		li:after {
+			content: "|";
+		}
+	}
+}
+
+a {
+	color: #999;
+}
+
+section {
+	text-align: center;
+	border: 1px solid var(--border-major);
+	padding: 200px;
+	padding-top: 300px;
+}

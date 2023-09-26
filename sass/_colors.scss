@@ -1,0 +1,32 @@
+// https://coolors.co/052f5f-005377-06a77d-d5c67a-f1a208
+:root {
+	--berkley-blue: #052F5F; 
+	--indigo-dye: #005377; 
+	--jungle-green: #06A77D;
+	--citron: #D5C67A;
+	--orange: #F1A208;
+
+	--white: #eeeeee;
+	--light: #999999;
+	--dark: #333333;
+	--mid-grey: #666666;
+}
+
+html {
+	--clr-1: var(--berkley-blue); 
+	--clr-1-text: var(--light); 
+
+	--clr-2: var(--indigo-dye); 
+	--clr-2-text: var(--light); 
+
+	--clr-3: var(--jungle-green); 
+	--clr-3-text: var(--white); 
+
+	--clr-4: var(--citron); 
+	--clr-4-text: var(--mid-grey); 
+
+	--clr-5: var(--orange); 
+	--clr-5-text: var(--mid-grey); 
+
+	--border-major: var(--mid-grey);
+}

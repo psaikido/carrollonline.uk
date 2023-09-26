@@ -1,0 +1,74 @@
+.grid-wrap {
+	display: grid;
+
+	grid-template-areas:
+		"heading"
+		"home"
+		"mantrasphere"
+		"hugle"
+		"archive"
+		"chan";
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+
+	#heading {
+		grid-area: heading;
+		position: sticky;
+		top: 0;
+		width: 100%;
+		height: 142px;
+		background-color: var(--dark);
+	}
+
+	#home {
+		grid-area: home;
+		background-color: var(--clr-1);
+
+		a {
+			color: var(--clr-1-text);
+		}
+	}
+
+	#mantrasphere {
+		grid-area: mantrasphere;
+		background-color: var(--clr-2);
+
+		a {
+			color: var(--clr-2-text);
+		}
+	}
+
+	#hugle {
+		grid-area: hugle;
+		background-color: var(--clr-3);
+
+		a {
+			color: var(--clr-3-text);
+		}
+	}
+
+	#archive {
+		grid-area: archive;
+		background-color: var(--clr-4);
+
+		a {
+			color: var(--clr-4-text);
+		}
+	}
+
+	#chan {
+		grid-area: chan;
+		background-color: var(--clr-5);
+
+		a {
+			color: var(--clr-5-text);
+		}
+	}
+
+	section {
+		height: 100vh;
+		margin-top: 142px;
+	}
+}
+
+
