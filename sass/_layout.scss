@@ -54,101 +54,46 @@
 			"mid-left mid-middle mid-right"
 			"btm-left btm-middle btm-right";
 
-		&.home {
-			h2 {
-				grid-area: mid-middle;
-			}
+		h2 {
+			margin: auto;
+		}
 
-			.pic {
-				grid-column-start: 3;
+		.pic {
+			img {
+				object-fit: contain;
+				width: 100%;
+			}
+		}
+
+		.desc {
+			grid-column: 1 / 4;
+			grid-row: 4 / 5;
+			font-size: .8em;
+		}
+
+		&.pic-left {
+			h2 {
+				grid-column: 2 / 4;
 				grid-row: 2 / 4;
-
-				img {
-					width: 400px;
-				}
-			}
-
-			.desc {
-				grid-area: btm-left;
-			}
-		}
-
-		&.mantrasphere {
-			h2 {
-				grid-area: mid-right;
 			}
 
 			.pic {
-				grid-column-start: 1;
+				grid-column: 1 / 2;
 				grid-row: 2 / 4;
-
-				img {
-					width: 400px;
-				}
-			}
-
-			.desc {
-				grid-area: btm-middle;
 			}
 		}
 
-		&.hugle {
+		&.pic-right {
 			h2 {
-				grid-area: top-middle;
-			}
-
-			.pic {
-				grid-column-start: 1;
-				grid-row: 3 / 4;
-
-				img {
-					width: 400px;
-				}
-			}
-
-			.desc {
-				grid-area: mid-right;
-			}
-		}
-
-		&.archive {
-			h2 {
-				grid-area: mid-right;
-			}
-
-			.pic {
-				grid-column-start: 1;
+				grid-column: 1 / 3;
 				grid-row: 2 / 4;
-
-				img {
-					width: 400px;
-				}
-			}
-
-			.desc {
-				grid-area: btm-middle;
-			}
-		}
-
-		&.chan {
-			h2 {
-				grid-area: top-middle;
 			}
 
 			.pic {
-				grid-column-start: 1;
-				grid-row: 3 / 4;
-
-				img {
-					width: 400px;
-				}
-			}
-
-			.desc {
-				grid-area: btm-right;
+				grid-column: 3 / 5;
+				grid-row: 2 / 4;
 			}
 		}
 	}
 }
-
 
