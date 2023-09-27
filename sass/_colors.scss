@@ -2,6 +2,7 @@
 :root {
 	--berkley-blue: #052F5F; 
 	--earth-green: #484F23;
+	--indigo-dye: #005377;
 	--hugle-mud: #34322D;
 	--hugle-hilight: #ee8c2b;
 	--fam-purple: #343248;
@@ -18,67 +19,53 @@
 }
 
 html {
-	--clr-1: var(--earth-green); 
-	--clr-1-text: var(--light); 
-
-	--clr-2: var(--black); 
-	--clr-2-text: var(--pure-white); 
-
-	--clr-3: var(--hugle-mud); 
-	--clr-3-text: var(--hugle-hilight); 
-
-	--clr-4: var(--fam-purple); 
-	--clr-4-text: var(--fam-gold); 
-
-	--clr-5: var(--chan-grey); 
-	--clr-5-text: var(--chan-blue); 
-
 	--border-major: var(--mid-grey);
 }
 
 body {
 	.clr-scheme-home {
-		background-color: var(--clr-1);
-		color: var(--clr-1-text);
+		background-color: var(--berkley-blue);
+		color: var(--light);
 
 		a {
-			color: var(--clr-1-text);
+			color: var(--light);
 		}
 	}
 
 	.clr-scheme-mantrasphere {
-		background-color: var(--clr-2);
-		color: var(--clr-2-text);
+		background-color: var(--dark);
+		color: var(--pure-white);
 
 		a {
-			color: var(--clr-2-text);
+			color: var(--pure-white);
 		}
 	}
 
 	.clr-scheme-hugle {
-		background-color: var(--clr-3);
-		color: var(--clr-3-text);
+		// background-color: var(--hugle-mud);
+		background-color: var(--earth-green);
+		color: var(--off-white);
 
 		a {
-			color: var(--clr-3-text);
+			color: var(--off-white);
 		}
 	}
 
 	.clr-scheme-archive {
-		background-color: var(--clr-4);
-		color: var(--clr-4-text);
+		background-color: var(--fam-purple);
+		color: var(--light);
 
 		a {
-			color: var(--clr-4-text);
+			color: var(--light);
 		}
 	}
 
 	.clr-scheme-chan {
-		background-color: var(--clr-5);
-		color: var(--clr-5-text);
+		background-color: var(--indigo-dye);
+		color: var(--light);
 
 		a {
-			color: var(--clr-5-text);
+			color: var(--light);
 		}
 	}
 }

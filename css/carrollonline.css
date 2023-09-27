@@ -1,6 +1,7 @@
 :root {
   --berkley-blue: #052F5F;
   --earth-green: #484F23;
+  --indigo-dye: #005377;
   --hugle-mud: #34322D;
   --hugle-hilight: #ee8c2b;
   --fam-purple: #343248;
@@ -15,43 +16,33 @@
   --black: #000000; }
 
 html {
-  --clr-1: var(--earth-green);
-  --clr-1-text: var(--light);
-  --clr-2: var(--black);
-  --clr-2-text: var(--pure-white);
-  --clr-3: var(--hugle-mud);
-  --clr-3-text: var(--hugle-hilight);
-  --clr-4: var(--fam-purple);
-  --clr-4-text: var(--fam-gold);
-  --clr-5: var(--chan-grey);
-  --clr-5-text: var(--chan-blue);
   --border-major: var(--mid-grey); }
 
 body .clr-scheme-home {
-  background-color: var(--clr-1);
-  color: var(--clr-1-text); }
+  background-color: var(--berkley-blue);
+  color: var(--light); }
   body .clr-scheme-home a {
-    color: var(--clr-1-text); }
+    color: var(--light); }
 body .clr-scheme-mantrasphere {
-  background-color: var(--clr-2);
-  color: var(--clr-2-text); }
+  background-color: var(--dark);
+  color: var(--pure-white); }
   body .clr-scheme-mantrasphere a {
-    color: var(--clr-2-text); }
+    color: var(--pure-white); }
 body .clr-scheme-hugle {
-  background-color: var(--clr-3);
-  color: var(--clr-3-text); }
+  background-color: var(--earth-green);
+  color: var(--off-white); }
   body .clr-scheme-hugle a {
-    color: var(--clr-3-text); }
+    color: var(--off-white); }
 body .clr-scheme-archive {
-  background-color: var(--clr-4);
-  color: var(--clr-4-text); }
+  background-color: var(--fam-purple);
+  color: var(--light); }
   body .clr-scheme-archive a {
-    color: var(--clr-4-text); }
+    color: var(--light); }
 body .clr-scheme-chan {
-  background-color: var(--clr-5);
-  color: var(--clr-5-text); }
+  background-color: var(--indigo-dye);
+  color: var(--light); }
   body .clr-scheme-chan a {
-    color: var(--clr-5-text); }
+    color: var(--light); }
 
 .grid-wrap {
   display: grid;
@@ -98,11 +89,12 @@ body .clr-scheme-chan {
       .grid-wrap section.pic-right .pic {
         grid-area: img; }
     .grid-wrap section h2 {
-      margin: auto; }
+      margin: auto;
+      text-shadow: -4px 8px var(--black); }
     .grid-wrap section .pic img {
       object-fit: contain;
       width: 100%;
-      height: 100%; }
+      border: 1px solid var(--border-major); }
     .grid-wrap section .desc {
       grid-column: 1 / 4;
       grid-row: 4 / 5;
@@ -129,7 +121,8 @@ section {
 
 nav {
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  border-bottom: 1px solid var(--border-major); }
   nav ul {
     margin: 0 auto;
     list-style: none;
