@@ -42,6 +42,9 @@
 	section {
 		height: 100vh;
 		display: grid;
+		padding: 30px;
+		border: none;
+
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 142px 1fr 2fr 1fr;
 		grid-gap: 15px;
@@ -57,13 +60,35 @@
 			}
 
 			.pic {
-				grid-area: top-right;
+				grid-column-start: 3;
+				grid-row: 2 / 4;
+
+				img {
+					width: 400px;
+				}
+			}
+
+			.desc {
+				grid-area: btm-left;
 			}
 		}
 
 		&.mantrasphere {
 			h2 {
-				grid-area: mid-left;
+				grid-area: mid-right;
+			}
+
+			.pic {
+				grid-column-start: 1;
+				grid-row: 2 / 4;
+
+				img {
+					width: 400px;
+				}
+			}
+
+			.desc {
+				grid-area: btm-middle;
 			}
 		}
 
@@ -71,17 +96,56 @@
 			h2 {
 				grid-area: top-middle;
 			}
+
+			.pic {
+				grid-column-start: 1;
+				grid-row: 3 / 4;
+
+				img {
+					width: 400px;
+				}
+			}
+
+			.desc {
+				grid-area: mid-right;
+			}
 		}
 
 		&.archive {
 			h2 {
 				grid-area: mid-right;
 			}
+
+			.pic {
+				grid-column-start: 1;
+				grid-row: 2 / 4;
+
+				img {
+					width: 400px;
+				}
+			}
+
+			.desc {
+				grid-area: btm-middle;
+			}
 		}
 
 		&.chan {
 			h2 {
-				grid-area: btm-left;
+				grid-area: top-middle;
+			}
+
+			.pic {
+				grid-column-start: 1;
+				grid-row: 3 / 4;
+
+				img {
+					width: 400px;
+				}
+			}
+
+			.desc {
+				grid-area: btm-right;
 			}
 		}
 	}

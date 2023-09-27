@@ -1,32 +1,37 @@
 // https://coolors.co/052f5f-005377-06a77d-d5c67a-f1a208
 :root {
 	--berkley-blue: #052F5F; 
-	--indigo-dye: #005377; 
-	--jungle-green: #037D7A;
-	--citron: #D5C67A;
-	--orange: #F1A208;
+	--earth-green: #484F23;
+	--hugle-mud: #34322D;
+	--hugle-hilight: #ee8c2b;
+	--fam-purple: #343248;
+	--fam-gold: #957740;
+	--chan-grey: #555559;
+	--chan-blue: #157dff;
 
-	--white: #eeeeee;
+	--pure-white: #ffffff;
+	--off-white: #eeeeee;
 	--light: #999999;
 	--mid-grey: #666666;
 	--dark: #333333;
+	--black: #000000;
 }
 
 html {
-	--clr-1: var(--berkley-blue); 
+	--clr-1: var(--earth-green); 
 	--clr-1-text: var(--light); 
 
-	--clr-2: var(--indigo-dye); 
-	--clr-2-text: var(--light); 
+	--clr-2: var(--black); 
+	--clr-2-text: var(--pure-white); 
 
-	--clr-3: var(--jungle-green); 
-	--clr-3-text: var(--dark); 
+	--clr-3: var(--hugle-mud); 
+	--clr-3-text: var(--hugle-hilight); 
 
-	--clr-4: var(--citron); 
-	--clr-4-text: var(--dark); 
+	--clr-4: var(--fam-purple); 
+	--clr-4-text: var(--fam-gold); 
 
-	--clr-5: var(--orange); 
-	--clr-5-text: var(--dark); 
+	--clr-5: var(--chan-grey); 
+	--clr-5-text: var(--chan-blue); 
 
 	--border-major: var(--mid-grey);
 }
@@ -34,8 +39,6 @@ html {
 body {
 	.clr-scheme-home {
 		background-color: var(--clr-1);
-		// background: linear-gradient(90deg, hsla(39, 100%, 71%, 1) 0%, hsla(216, 100%, 62%, 1) 100%);
-
 		color: var(--clr-1-text);
 
 		a {

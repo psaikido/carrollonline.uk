@@ -13,7 +13,10 @@ body {
 	h1 {
 		text-align: center;
 		margin: 10px 0 10px 0;
-		color: var(--orange);
+
+		a {
+			color: var(--hugle-highlight);
+		}
 	}
 }
 
