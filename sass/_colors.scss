@@ -11,7 +11,7 @@
 	--chan-blue: #157dff;
 
 	--pure-white: #ffffff;
-	--off-white: #eeeeee;
+	--off-white: #aaaaaa;
 	--light: #999999;
 	--mid-grey: #666666;
 	--dark: #333333;
@@ -34,10 +34,10 @@ body {
 
 	.clr-scheme-mantrasphere {
 		background-color: var(--dark);
-		color: var(--pure-white);
+		color: var(--off-white);
 
 		a {
-			color: var(--pure-white);
+			color: var(--off-white);
 		}
 	}
 

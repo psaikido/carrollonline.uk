@@ -17,6 +17,10 @@
 		width: 100%;
 		height: 142px;
 		background-color: var(--dark);
+
+		h1 a {
+			letter-spacing: 10px;
+		}
 	}
 
 	.home {
@@ -46,14 +50,14 @@
 		border: none;
 
 		&.pic-left {
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
 			grid-template-rows: 142px 1fr 2fr 1fr;
 			grid-gap: 15px;
 			grid-template-areas:
-				"blank blank blank"
-				"img main main"
-				"img main main"
-				"sub sub sub";
+				". blank blank blank ."
+				". img main main ."
+				". img main main ."
+				". sub sub sub .";
 
 			h2 {
 				grid-area: main;
@@ -61,18 +65,22 @@
 
 			.pic {
 				grid-area: img;
+			}
+
+			.desc {
+				grid-area: sub;
 			}
 		}
 
 		&.pic-right {
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
 			grid-template-rows: 142px 1fr 2fr 1fr;
 			grid-gap: 15px;
 			grid-template-areas:
-				"blank blank blank"
-				"main main img"
-				"main main img"
-				"sub sub sub";
+				". blank blank blank ."
+				". main main img ."
+				". main main img ."
+				". sub sub sub .";
 
 			h2 {
 				grid-area: main;
@@ -80,12 +88,16 @@
 
 			.pic {
 				grid-area: img;
+			}
+
+			.desc {
+				grid-area: sub;
 			}
 		}
 
 		h2 {
 			margin: auto;
-			text-shadow: -4px 8px var(--black);
+			text-shadow: -2px 4px var(--black);
 		}
 
 		.pic {
@@ -97,11 +109,8 @@
 		}
 
 		.desc {
-			grid-column: 1 / 4;
-			grid-row: 4 / 5;
 			font-size: .8em;
 		}
-
 	}
 }
 

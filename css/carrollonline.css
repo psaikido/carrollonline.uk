@@ -9,7 +9,7 @@
   --chan-grey: #555559;
   --chan-blue: #157dff;
   --pure-white: #ffffff;
-  --off-white: #eeeeee;
+  --off-white: #aaaaaa;
   --light: #999999;
   --mid-grey: #666666;
   --dark: #333333;
@@ -25,9 +25,9 @@ body .clr-scheme-home {
     color: var(--light); }
 body .clr-scheme-mantrasphere {
   background-color: var(--dark);
-  color: var(--pure-white); }
+  color: var(--off-white); }
   body .clr-scheme-mantrasphere a {
-    color: var(--pure-white); }
+    color: var(--off-white); }
 body .clr-scheme-hugle {
   background-color: var(--earth-green);
   color: var(--off-white); }
@@ -55,6 +55,8 @@ body .clr-scheme-chan {
     width: 100%;
     height: 142px;
     background-color: var(--dark); }
+    .grid-wrap .heading h1 a {
+      letter-spacing: 10px; }
   .grid-wrap .home {
     grid-area: home; }
   .grid-wrap .mantrasphere {
@@ -71,33 +73,35 @@ body .clr-scheme-chan {
     padding: 30px;
     border: none; }
     .grid-wrap section.pic-left {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
       grid-template-rows: 142px 1fr 2fr 1fr;
       grid-gap: 15px;
-      grid-template-areas: "blank blank blank" "img main main" "img main main" "sub sub sub"; }
+      grid-template-areas: ". blank blank blank ." ". img main main ." ". img main main ." ". sub sub sub ."; }
       .grid-wrap section.pic-left h2 {
         grid-area: main; }
       .grid-wrap section.pic-left .pic {
         grid-area: img; }
+      .grid-wrap section.pic-left .desc {
+        grid-area: sub; }
     .grid-wrap section.pic-right {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
       grid-template-rows: 142px 1fr 2fr 1fr;
       grid-gap: 15px;
-      grid-template-areas: "blank blank blank" "main main img" "main main img" "sub sub sub"; }
+      grid-template-areas: ". blank blank blank ." ". main main img ." ". main main img ." ". sub sub sub ."; }
       .grid-wrap section.pic-right h2 {
         grid-area: main; }
       .grid-wrap section.pic-right .pic {
         grid-area: img; }
+      .grid-wrap section.pic-right .desc {
+        grid-area: sub; }
     .grid-wrap section h2 {
       margin: auto;
-      text-shadow: -4px 8px var(--black); }
+      text-shadow: -2px 4px var(--black); }
     .grid-wrap section .pic img {
       object-fit: contain;
       width: 100%;
       border: 1px solid var(--border-major); }
     .grid-wrap section .desc {
-      grid-column: 1 / 4;
-      grid-row: 4 / 5;
       font-size: .8em; }
 
 html {
