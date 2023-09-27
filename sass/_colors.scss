@@ -2,14 +2,14 @@
 :root {
 	--berkley-blue: #052F5F; 
 	--indigo-dye: #005377; 
-	--jungle-green: #06A77D;
+	--jungle-green: #037D7A;
 	--citron: #D5C67A;
 	--orange: #F1A208;
 
 	--white: #eeeeee;
 	--light: #999999;
-	--dark: #333333;
 	--mid-grey: #666666;
+	--dark: #333333;
 }
 
 html {
@@ -20,13 +20,62 @@ html {
 	--clr-2-text: var(--light); 
 
 	--clr-3: var(--jungle-green); 
-	--clr-3-text: var(--white); 
+	--clr-3-text: var(--dark); 
 
 	--clr-4: var(--citron); 
-	--clr-4-text: var(--mid-grey); 
+	--clr-4-text: var(--dark); 
 
 	--clr-5: var(--orange); 
-	--clr-5-text: var(--mid-grey); 
+	--clr-5-text: var(--dark); 
 
 	--border-major: var(--mid-grey);
+}
+
+body {
+	.clr-scheme-home {
+		background-color: var(--clr-1);
+		// background: linear-gradient(90deg, hsla(39, 100%, 71%, 1) 0%, hsla(216, 100%, 62%, 1) 100%);
+
+		color: var(--clr-1-text);
+
+		a {
+			color: var(--clr-1-text);
+		}
+	}
+
+	.clr-scheme-mantrasphere {
+		background-color: var(--clr-2);
+		color: var(--clr-2-text);
+
+		a {
+			color: var(--clr-2-text);
+		}
+	}
+
+	.clr-scheme-hugle {
+		background-color: var(--clr-3);
+		color: var(--clr-3-text);
+
+		a {
+			color: var(--clr-3-text);
+		}
+	}
+
+	.clr-scheme-archive {
+		background-color: var(--clr-4);
+		color: var(--clr-4-text);
+
+		a {
+			color: var(--clr-4-text);
+		}
+	}
+
+	.clr-scheme-chan {
+		background-color: var(--clr-5);
+		color: var(--clr-5-text);
+
+		a {
+			color: var(--clr-5-text);
+		}
+	}
 }

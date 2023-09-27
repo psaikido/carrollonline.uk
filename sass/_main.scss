@@ -5,40 +5,19 @@ html {
 body {
 	background-color: var(--dark);
 	color: var(--light);
+	font-family: 'Comfortaa', cursive;
+	font-size: 2rem;
 }
 
-#heading {
+.heading {
 	h1 {
 		text-align: center;
+		margin: 10px 0 10px 0;
+		color: var(--orange);
 	}
-
-	nav {
-		margin: 0 auto;
-		width: 50%;
-		text-align: center;
-
-		ul {
-			list-style: none;
-		}
-
-		li {
-			display: inline-block;
-			margin-right: 30px;
-		}
-
-		li:after {
-			content: "|";
-		}
-	}
-}
-
-a {
-	color: #999;
 }
 
 section {
 	text-align: center;
 	border: 1px solid var(--border-major);
-	padding: 200px;
-	padding-top: 300px;
 }

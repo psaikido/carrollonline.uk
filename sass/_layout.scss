@@ -1,6 +1,7 @@
 .grid-wrap {
 	display: grid;
 
+	grid-template-columns: auto;
 	grid-template-areas:
 		"heading"
 		"home"
@@ -8,10 +9,8 @@
 		"hugle"
 		"archive"
 		"chan";
-	grid-template-columns: auto;
-	grid-template-rows: auto;
 
-	#heading {
+	.heading {
 		grid-area: heading;
 		position: sticky;
 		top: 0;
@@ -20,54 +19,71 @@
 		background-color: var(--dark);
 	}
 
-	#home {
+	.home {
 		grid-area: home;
-		background-color: var(--clr-1);
-
-		a {
-			color: var(--clr-1-text);
-		}
 	}
 
-	#mantrasphere {
+	.mantrasphere {
 		grid-area: mantrasphere;
-		background-color: var(--clr-2);
-
-		a {
-			color: var(--clr-2-text);
-		}
 	}
 
-	#hugle {
+	.hugle {
 		grid-area: hugle;
-		background-color: var(--clr-3);
-
-		a {
-			color: var(--clr-3-text);
-		}
 	}
 
-	#archive {
+	.archive {
 		grid-area: archive;
-		background-color: var(--clr-4);
-
-		a {
-			color: var(--clr-4-text);
-		}
 	}
 
-	#chan {
+	.chan {
 		grid-area: chan;
-		background-color: var(--clr-5);
-
-		a {
-			color: var(--clr-5-text);
-		}
 	}
 
 	section {
 		height: 100vh;
-		margin-top: 142px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 142px 1fr 2fr 1fr;
+		grid-gap: 15px;
+		grid-template-areas:
+			"blank blank blank"
+			"top-left top-middle top-right"
+			"mid-left mid-middle mid-right"
+			"btm-left btm-middle btm-right";
+
+		&.home {
+			h2 {
+				grid-area: mid-middle;
+			}
+
+			.pic {
+				grid-area: top-right;
+			}
+		}
+
+		&.mantrasphere {
+			h2 {
+				grid-area: mid-left;
+			}
+		}
+
+		&.hugle {
+			h2 {
+				grid-area: top-middle;
+			}
+		}
+
+		&.archive {
+			h2 {
+				grid-area: mid-right;
+			}
+		}
+
+		&.chan {
+			h2 {
+				grid-area: btm-left;
+			}
+		}
 	}
 }
 

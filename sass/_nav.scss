@@ -1,0 +1,26 @@
+nav {
+	margin: 0 auto;
+	text-align: center;
+
+	ul {
+		margin: 0 auto;
+		list-style: none;
+		display: flex;
+		justify-content: space-around;
+
+		li {
+			display: inline-block;
+			width: auto;
+			padding: 3px 10px;
+			flex: 1 1 auto;
+
+			a {
+				color: var(--light);
+			}
+		}
+
+		li:not(:last-child) {
+			border-right: 1px solid var(--light);
+		}
+	}
+}
