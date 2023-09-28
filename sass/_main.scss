@@ -17,7 +17,8 @@ body {
 		a {
 			color: transparent;
 			background-clip: text;
-			// background-image: linear-gradient(to right, #00a2ff, #ff00d2, #fed90f);
+			-moz-background-clip: text;
+			-webkit-background-clip: text;
 			background-image: linear-gradient(to right, var(--indigo-dye), var(--fam-gold), var(--light));
 			text-decoration: underline;
 			text-decoration-color: var(--hugle-hilight);

@@ -119,6 +119,8 @@ body {
   .heading h1 a {
     color: transparent;
     background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
     background-image: linear-gradient(to right, var(--indigo-dye), var(--fam-gold), var(--light));
     text-decoration: underline;
     text-decoration-color: var(--hugle-hilight); }
