@@ -15,10 +15,15 @@ body {
 		margin: 10px auto 10px;
 
 		a {
-			background: linear-gradient(90deg, var(--light), var(--pure-white), var(--off-white), var(--light));
-			background-repeat: no-repeat;
+			background: linear-gradient(90deg, var(--light), var(--pure-white), var(--light));
+			background-position: 0;
+			overflow: hidden;
+			animation: shine 3s linear infinite;
+			animation-fill-mode: forward;
 			-webkit-background-clip: text;
-			-webkit-text-fill-color: rgba(255, 255, 255, 0);
+			-webkit-text-fill-color: transparent;
+			text-decoration: underline;
+			text-decoration-color: var(--border-major);
 		}
 	}
 }
@@ -30,6 +35,19 @@ section {
 	h2 a {
 		animation: moveIn 8s 0s cubic-bezier(.36,0,.06,1) alternate infinite ;
 	}
+}
+
+// https://codepen.io/FrankieDoodie/pen/dgVGad
+@keyframes shine {
+  0% {
+    background-position: 0
+  }
+  60% {
+    background-position: 180px
+	}
+  100% {
+    background-position: 700px
+  }
 }
 
 // https://codepen.io/vainsan/pen/NWRaPXG
