@@ -47,7 +47,7 @@ body .clr-scheme-chan {
 .grid-wrap {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "heading" "home" "mantrasphere" "hugle" "archive" "chan"; }
+  grid-template-areas: "heading" "home" "hugle" "mantrasphere" "archive" "chan"; }
   .grid-wrap .heading {
     grid-area: heading;
     position: sticky;
@@ -115,15 +115,12 @@ body {
 
 .heading h1 {
   text-align: center;
-  margin: 10px 0 10px 0; }
+  margin: 10px auto 10px; }
   .heading h1 a {
-    color: transparent;
-    background-clip: text;
-    -moz-background-clip: text;
+    background: linear-gradient(90deg, var(--light), var(--pure-white), var(--off-white), var(--light));
+    background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-image: linear-gradient(to right, var(--indigo-dye), var(--fam-gold), var(--light));
-    text-decoration: underline;
-    text-decoration-color: var(--hugle-hilight); }
+    -webkit-text-fill-color: rgba(255, 255, 255, 0); }
 
 section {
   text-align: center;
