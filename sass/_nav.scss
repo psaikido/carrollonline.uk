@@ -21,7 +21,7 @@ nav {
 		}
 
 		li:not(:last-child) {
-			border-right: 1px solid var(--light);
+			border-right: 1px solid var(--border-major);
 		}
 	}
 }

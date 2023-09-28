@@ -15,7 +15,12 @@ body {
 		margin: 10px 0 10px 0;
 
 		a {
-			color: var(--hugle-highlight);
+			color: transparent;
+			background-clip: text;
+			// background-image: linear-gradient(to right, #00a2ff, #ff00d2, #fed90f);
+			background-image: linear-gradient(to right, var(--indigo-dye), var(--fam-gold), var(--light));
+			text-decoration: underline;
+			text-decoration-color: var(--hugle-hilight);
 		}
 	}
 }
