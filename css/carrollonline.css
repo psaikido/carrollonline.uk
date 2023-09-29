@@ -13,11 +13,39 @@ html {
 
 .map {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto 200px;
-  grid-template-areas: "top 			top 			 top" "btm-left btm-centre btm-right"; }
+  grid-template-areas: ". 			  islands 	 ." "btm-left btm-centre btm-right"; }
   .map .islands {
-    grid-area: top; }
+    grid-area: islands;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "nw ne" "sw se"; }
+    .map .islands .island-hugle {
+      grid-area: nw; }
+      .map .islands .island-hugle img {
+        margin: 88px 110px;
+        width: 200px;
+        height: 150px; }
+    .map .islands .island-mantrasphere {
+      grid-area: ne; }
+      .map .islands .island-mantrasphere img {
+        margin: 50px 50px;
+        width: 250px;
+        height: 200px; }
+    .map .islands .island-archive {
+      grid-area: sw; }
+      .map .islands .island-archive img {
+        margin: 0 80px;
+        width: 250px;
+        height: 200px; }
+    .map .islands .island-chan {
+      grid-area: se; }
+      .map .islands .island-chan img {
+        margin: 0 30px;
+        width: 150px;
+        height: 100px; }
   .map .title {
     grid-area: btm-right; }
   .map .legend {
@@ -52,12 +80,6 @@ body {
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: 99% 9px; }
-
-.islands {
-  background-image: url("../graphics/islands.png");
-  background-repeat: no-repeat;
-  background-size: 60%;
-  background-position: center; }
 
 .box {
   border: 3px solid var(--border-major);

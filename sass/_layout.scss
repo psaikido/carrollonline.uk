@@ -1,13 +1,59 @@
 .map {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: auto 200px;
 	grid-template-areas:
-		"top 			top 			 top"
+		". 			  islands 	 ."
 		"btm-left btm-centre btm-right";
 
 	.islands {
-		grid-area: top;
+		grid-area: islands;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: 
+			"nw ne"
+			"sw se";
+
+		.island-hugle {
+			grid-area: nw;
+
+			img {
+				margin: 88px 110px;
+				width: 200px;
+				height: 150px;
+			}
+		}
+
+		.island-mantrasphere {
+			grid-area: ne;
+
+			img {
+				margin: 50px 50px;
+				width: 250px;
+				height: 200px;
+			}
+		}
+
+		.island-archive {
+			grid-area: sw;
+
+			img {
+				margin: 0 80px;
+				width: 250px;
+				height: 200px;
+			}
+		}
+
+		.island-chan {
+			grid-area: se;
+
+			img {
+				margin: 0 30px;
+				width: 150px;
+				height: 100px;
+			}
+		}
 	}
 
 	.title {
