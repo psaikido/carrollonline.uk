@@ -1,14 +1,6 @@
 // https://coolors.co/052f5f-005377-06a77d-d5c67a-f1a208
 :root {
-	--berkley-blue: #052F5F; 
-	--earth-green: #484F23;
-	--indigo-dye: #005377;
-	--hugle-mud: #34322D;
-	--hugle-hilight: #ee8c2b;
-	--fam-purple: #343248;
-	--fam-gold: #957740;
-	--chan-grey: #555559;
-	--chan-blue: #157dff;
+	--paper: #c6b486;
 
 	--pure-white: #ffffff;
 	--off-white: #aaaaaa;
@@ -20,52 +12,22 @@
 
 html {
 	--border-major: var(--mid-grey);
+	--bg-major: var(--paper);
 }
 
 body {
 	.clr-scheme-home {
-		background-color: var(--berkley-blue);
-		color: var(--light);
-
-		a {
-			color: var(--light);
-		}
 	}
 
 	.clr-scheme-mantrasphere {
-		background-color: var(--dark);
-		color: var(--off-white);
-
-		a {
-			color: var(--off-white);
-		}
 	}
 
 	.clr-scheme-hugle {
-		// background-color: var(--hugle-mud);
-		background-color: var(--earth-green);
-		color: var(--off-white);
-
-		a {
-			color: var(--off-white);
-		}
 	}
 
 	.clr-scheme-archive {
-		background-color: var(--fam-purple);
-		color: var(--light);
-
-		a {
-			color: var(--light);
-		}
 	}
 
 	.clr-scheme-chan {
-		background-color: var(--indigo-dye);
-		color: var(--light);
-
-		a {
-			color: var(--light);
-		}
 	}
 }
