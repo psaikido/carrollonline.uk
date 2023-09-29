@@ -2,7 +2,6 @@ html, body {
 	scroll-behavior: smooth;
 	margin: 0;
 	padding: 0;
-	height: 100vh;
 }
 
 /* include border and padding in element width and height */
@@ -20,13 +19,28 @@ body {
 }
 
 .grid-wrap {
-	height: calc(100% - 20px);
+	height: calc(100vh - 20px);
 	border: 3px solid var(--dark);
 	margin: 10px;
 	background-size: 80px 80px;
   background-image:
     linear-gradient(to right, var(--border-major) 1px, transparent 1px),
     linear-gradient(to bottom, var(--border-major) 1px, transparent 1px);
+}
+
+.map {
+	height: 100%;
+	background-image: url('../graphics/rose.png');
+	background-size: 200px;
+	background-repeat: no-repeat;
+	background-position: 99% 9px;
+}
+
+.islands {
+	background-image: url('../graphics/islands.png');
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-position: center;
 }
 
 .box {
@@ -47,7 +61,7 @@ body {
 		position: absolute;
 		bottom: 10px;
 		right: 10px;
-		height: 220px;
+		height: 200px;
 		width: 400px;
 
 		h1 {
@@ -59,18 +73,7 @@ body {
 		position: absolute;
 		bottom: 10px;
 		left: 10px;
-		height: 220px;
-		width: 500px;
+		height: 200px;
+		width: 400px;
 	}
-}
-
-.rose {
-	position: absolute;
-	top: 23px;
-	right: 20px;
-	height: 300px;
-	width: 300px;
-	background-image: url('../graphics/rose.png');
-	background-size: contain;
-	background-repeat: no-repeat;
 }
