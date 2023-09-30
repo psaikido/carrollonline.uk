@@ -1,86 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>carrollonline junction box</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/carrollonline.css" />
+	<title>Carrollonline Treasure Map</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/map.css" />
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
-
 	<div class="grid-wrap">
-		<div class="heading">
-			<h1><a href="#home">carrollonline.uk</a></h1>
+		<div class="map">
 
-			<nav>
-				<ul>
-					<li>
-						<a href="#hugle">hugle</a>
-					</li>
-					<li>
-						<a href="#mantrasphere">mantrasphere</a>
-					</li>
-					<li>
-						<a href="#archive">family archive</a>
-					</li>
-					<li>
-						<a href="#chan">chan</a>
-					</li>
-				</ul>
-			</nav>
+			<div class="box title">
+				<div class="inner">
+					<h1>The Domains &amp; Treasures of Hughie</h1>
+				</div>
+			</div>
+
+			<div class="box legend">
+				<h2>LEGEND</h2>
+
+				<div class="inner">
+					<div class="island-desc-hugle">
+						Click the island to book passage to Hughie's treasure store at hugle.uk.
+					</div>
+
+					<div class="island-desc-mantrasphere">
+						Click the island to book passage to Mantrasphere, an album of Buddhist inspired music.
+					</div>
+
+					<div class="island-desc-archive">
+						Click the island to book passage to the Carroll family archive.
+					</div>
+
+					<div class="island-desc-chan">
+						Click the island to book passage to the Swindon Chan Group.
+					</div>
+				</div>
+			</div>
+
+			<div class="islands">
+				<div class="island-hugle">
+					<h2>Hugle</h2>
+					<a href="https://hugle.uk">
+						<img src="graphics/island-hugle.png" />
+					</a>
+				</div>
+
+				<div class="island-mantrasphere">
+					<h2>Mantrasphere</h2>
+					<a href="https://hugle.uk/mantrasphere/intro/">
+						<img src="graphics/island-mantrasphere.png" />
+					</a>
+				</div>
+
+				<div class="island-archive">
+					<h2>Carroll Family Archive</h2>
+					<a href="https://family.carrollonline.uk">
+						<img src="graphics/island-archive.png" />
+					</a>
+				</div>
+
+				<div class="island-chan">
+					<h2>Swindon Chan</h2>
+					<a href="https://swindonchan.org">
+						<img src="graphics/island-chan.png" />
+					</a>
+				</div>
+			</div>
+
 		</div>
-
-
-		<section class="home clr-scheme-home pic-right" id="home">
-			<h2>a junction box <br />pointing to some of <br />Hughie's sites &amp; projects</h2>
-			<div class="pic">
-				<img src="graphics/GaiaHouseStyle.jpg" />
-			</div>
-			<div class="desc"> </div>
-		</section>
-
-		<section class="hugle clr-scheme-hugle pic-right" id="hugle">
-			<h2><a href="https://hugle.uk">hugle.uk</a></h2>
-			<div class="pic">
-				<img src="graphics/hugle.png" />
-			</div>
-			<div class="desc">
-				Hughie's home site
-			</div>
-		</section>
-
-		<section class="mantrasphere clr-scheme-mantrasphere pic-left" id="mantrasphere">
-			<h2><a href="https://hugle.uk/mantrasphere/intro/">Mantrasphere</a></h2>
-			<div class="pic">
-				<img src="graphics/mantrasphere.gif" />
-			</div>
-			<div class="desc">
-				an album of Buddhist inspired music	
-			</div>
-		</section>
-
-		<section class="archive clr-scheme-archive pic-left" id="archive">
-			<h2><a href="https://family.carrollonline.uk">Carroll family archive</a></h2>
-			<div class="pic">
-				<img src="graphics/family-archive.png" />
-			</div>
-			<div class="desc">
-				history, genealogy, pics, trivia
-			</div>
-		</section>
-
-		<section class="chan clr-scheme-chan pic-right" id="chan">
-			<h2><a href="https://swindonchan.org">Swindon Chan Group</a></h2>
-			<div class="pic">
-				<img src="graphics/chanGroup.png" />
-			</div>
-			<div class="desc">
-				meditation
-			</div>
-		</section>
-
 	</div>
+
+	<script type="text/javascript" src="js/toggler.js"></script>
 </body>
 </html>
