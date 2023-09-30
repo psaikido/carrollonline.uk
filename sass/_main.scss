@@ -46,7 +46,7 @@ body {
 	.inner {
 		height: calc(100% - 10px);
 		margin: 5px;
-		padding: 40px;
+		padding: 20px;
 		border: 2px solid var(--border-major);
 	}
 
@@ -68,5 +68,89 @@ body {
 		left: 10px;
 		height: 200px;
 		width: 400px;
+
+		& > h2 {
+			margin: 0 auto;
+			width: 100px;
+		}
+
+		& .inner {
+			height: calc(100% - 40px);
+
+			& > * {
+				display: none;
+				font-size: 1.3em;
+			}
+		}
 	}
 }
+
+.island-hugle {
+	position: relative;
+
+	h2 {
+		position: absolute;
+		top: 61px;
+		left: 100px;
+		letter-spacing: 8px;
+	}
+	
+	&:hover {
+		img {
+			filter: invert(100%);
+		}
+	}
+}
+
+.island-mantrasphere {
+	position: relative;
+
+	h2 {
+		position: absolute;
+		top: 10px;
+		left: 50px;
+		letter-spacing: 8px;
+	}
+	
+	&:hover {
+		img {
+			filter: invert(100%);
+		}
+	}
+}
+
+.island-archive {
+	position: relative;
+
+	h2 {
+		position: absolute;
+		top: -36px;
+		left: 210px;
+		letter-spacing: 8px;
+	}
+	
+	&:hover {
+		img {
+			filter: invert(100%);
+		}
+	}
+}
+
+.island-chan {
+	position: relative;
+
+	h2 {
+		position: absolute;
+		top: 80px;
+		left: 64px;
+		letter-spacing: 8px;
+	}
+	
+	&:hover {
+		img {
+			filter: invert(100%);
+		}
+	}
+}
+
+

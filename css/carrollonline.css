@@ -14,8 +14,8 @@ html {
 .map {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto 200px;
-  grid-template-areas: ". 			  islands 	 ." "btm-left btm-centre btm-right"; }
+  grid-template-rows: 100px auto 200px;
+  grid-template-areas: ".				.					 ." ". 			  islands 	 ." "btm-left btm-centre btm-right"; }
   .map .islands {
     grid-area: islands;
     display: grid;
@@ -90,7 +90,7 @@ body {
   .box .inner {
     height: calc(100% - 10px);
     margin: 5px;
-    padding: 40px;
+    padding: 20px;
     border: 2px solid var(--border-major); }
   .box.title {
     position: absolute;
@@ -106,6 +106,54 @@ body {
     left: 10px;
     height: 200px;
     width: 400px; }
+    .box.legend > h2 {
+      margin: 0 auto;
+      width: 100px; }
+    .box.legend .inner {
+      height: calc(100% - 40px); }
+      .box.legend .inner > * {
+        display: none;
+        font-size: 1.3em; }
+
+.island-hugle {
+  position: relative; }
+  .island-hugle h2 {
+    position: absolute;
+    top: 61px;
+    left: 100px;
+    letter-spacing: 8px; }
+  .island-hugle:hover img {
+    filter: invert(100%); }
+
+.island-mantrasphere {
+  position: relative; }
+  .island-mantrasphere h2 {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    letter-spacing: 8px; }
+  .island-mantrasphere:hover img {
+    filter: invert(100%); }
+
+.island-archive {
+  position: relative; }
+  .island-archive h2 {
+    position: absolute;
+    top: -36px;
+    left: 210px;
+    letter-spacing: 8px; }
+  .island-archive:hover img {
+    filter: invert(100%); }
+
+.island-chan {
+  position: relative; }
+  .island-chan h2 {
+    position: absolute;
+    top: 80px;
+    left: 64px;
+    letter-spacing: 8px; }
+  .island-chan:hover img {
+    filter: invert(100%); }
 
 nav {
   margin: 0 auto;

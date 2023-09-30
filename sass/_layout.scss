@@ -1,8 +1,9 @@
 .map {
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: auto 200px;
+	grid-template-rows: 100px auto 200px;
 	grid-template-areas:
+		".				.					 ."
 		". 			  islands 	 ."
 		"btm-left btm-centre btm-right";
 
