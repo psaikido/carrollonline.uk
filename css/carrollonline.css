@@ -24,10 +24,6 @@ html {
     grid-template-areas: "nw ne" "sw se"; }
     .map .islands .island-hugle {
       grid-area: nw; }
-      .map .islands .island-hugle img {
-        margin: 88px 110px;
-        width: 200px;
-        height: 150px; }
     .map .islands .island-mantrasphere {
       grid-area: ne; }
       .map .islands .island-mantrasphere img {
@@ -122,6 +118,12 @@ body {
     top: 61px;
     left: 100px;
     letter-spacing: 8px; }
+  .island-hugle img {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 84px;
+    left: 149px; }
   .island-hugle:hover img {
     filter: invert(100%); }
 

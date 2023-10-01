@@ -95,6 +95,14 @@ body {
 		letter-spacing: 8px;
 	}
 	
+	img {
+		position: absolute;
+		width: 200px;
+		height: 150px;
+		top: 84px;
+		left: 149px;
+	}
+
 	&:hover {
 		img {
 			filter: invert(100%);
