@@ -100,6 +100,7 @@ body {
 
 	img {
 		position: absolute;
+		filter: blur(1px);
 	}
 
 	&:hover {
@@ -108,7 +109,9 @@ body {
 		}
 
 		img {
-			stroke: var(--accent);
+			width: 60%;
+			height: 60%;
+			filter: blur(0);
 		}
 	}
 }

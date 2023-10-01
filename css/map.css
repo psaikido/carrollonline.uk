@@ -110,11 +110,14 @@ body {
     letter-spacing: 8px;
     font-size: 1.5rem; }
   .islands > * img {
-    position: absolute; }
+    position: absolute;
+    filter: blur(1px); }
   .islands > *:hover h2 {
     color: var(--accent); }
   .islands > *:hover img {
-    stroke: var(--accent); }
+    width: 60%;
+    height: 60%;
+    filter: blur(0); }
 
 .island-hugle h2 {
   top: 10%;
