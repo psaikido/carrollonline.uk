@@ -1,13 +1,15 @@
-@mixin bg-checks($clr) {
-	background-image:
-    linear-gradient(45deg, $clr 25%, transparent 0),
-    linear-gradient(45deg, transparent 75%, $clr 0),
-    linear-gradient(45deg, $clr 25%, transparent 0),
-    linear-gradient(45deg, transparent 75%, $clr 0);
-  background-position: 
-    0 0, 
-		10px 10px,
-    10px 10px, 
-		20px 20px;
-  background-size: 20px 20px;
+$breakpoints: (
+    'xsmall': ( max-width: 599px ),
+    'small': ( min-width: 600px ),
+    'medium': ( min-width: 900px ),
+    'large': ( min-width: 1200px ),
+    'desktop': ( min-width: 1400px )
+) !default;
+
+@mixin screen-width($breakpoint) {
+    @if map_has_key($breakpoints, $breakpoint) {
+        @media only screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
 }

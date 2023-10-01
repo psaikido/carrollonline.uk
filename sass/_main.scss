@@ -31,9 +31,13 @@ body {
 .map {
 	height: 100%;
 	background-image: url('../graphics/rose.png');
-	background-size: 200px;
+	background-size: 100px;
 	background-repeat: no-repeat;
 	background-position: 99% 9px;
+
+	@include screen-width('medium') {
+		background-size: 200px;
+	}
 }
 
 .box {

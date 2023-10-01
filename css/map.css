@@ -62,9 +62,12 @@ body {
 .map {
   height: 100%;
   background-image: url("../graphics/rose.png");
-  background-size: 200px;
+  background-size: 100px;
   background-repeat: no-repeat;
   background-position: 99% 9px; }
+  @media only screen and (min-width: 900px) {
+    .map {
+      background-size: 200px; } }
 
 .box {
   border: 3px solid var(--border-major);
