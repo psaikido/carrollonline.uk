@@ -85,79 +85,78 @@ body {
 	}
 }
 
-.island-hugle {
+.islands > * {
 	position: relative;
 
 	h2 {
 		position: absolute;
-		top: 61px;
-		left: 100px;
 		letter-spacing: 8px;
 	}
-	
+
 	img {
 		position: absolute;
-		width: 200px;
-		height: 150px;
-		top: 84px;
-		left: 149px;
 	}
 
 	&:hover {
 		img {
 			filter: invert(100%);
 		}
+	}
+}
+
+.island-hugle {
+	h2 {
+		top: 28px;
+		left: 80px;
+	}
+	
+	img {
+		width: 50%;
+		height: 50%;
+		top: 36px;
+		left: 149px;
 	}
 }
 
 .island-mantrasphere {
-	position: relative;
-
 	h2 {
-		position: absolute;
-		top: 10px;
+		top: 26px;
 		left: 50px;
-		letter-spacing: 8px;
 	}
 	
-	&:hover {
-		img {
-			filter: invert(100%);
-		}
+	img {
+		width: 50%;
+		height: 50%;
+		top: 84px;
+		left: 84px;
 	}
 }
 
 .island-archive {
-	position: relative;
-
 	h2 {
-		position: absolute;
-		top: -36px;
-		left: 210px;
-		letter-spacing: 8px;
+		top: 15px;
+		left: 10px;
 	}
 	
-	&:hover {
-		img {
-			filter: invert(100%);
-		}
+	img {
+		width: 50%;
+		height: 50%;
+		top: 16px;
+		left: 143px;
 	}
 }
 
 .island-chan {
-	position: relative;
-
 	h2 {
-		position: absolute;
-		top: 80px;
-		left: 64px;
-		letter-spacing: 8px;
+		top: 31px;
+		left: 156px;
 	}
 	
-	&:hover {
-		img {
-			filter: invert(100%);
-		}
+	img {
+		width: 50%;
+		height: 50%;
+		top: 0px;
+		left: 0px;
 	}
 }
 
