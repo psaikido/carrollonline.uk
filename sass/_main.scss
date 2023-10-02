@@ -48,7 +48,23 @@ body {
 		top: 10px;
 		right: 10px;
 		height: 150px;
+		text-shadow: 5px 5px red;
+
+		&:hover {
+			animation-name: wibble;
+			animation-duration: 3s;
+		}
 	}
+}
+
+@keyframes wibble {
+  from {
+		rotate: 0deg;
+  }
+
+  to {
+		rotate: 360deg;
+  }
 }
 
 .box {
@@ -93,8 +109,12 @@ body {
 			height: calc(100% - 40px);
 
 			& > * {
-				display: none;
 				font-size: 1.3em;
+				color: var(--accent);
+			}
+
+			& > .hide {
+				display: none;
 			}
 		}
 	}

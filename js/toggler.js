@@ -1,15 +1,20 @@
 $('.island-hugle').hover(function () {
-	$('.island-desc-hugle').toggle();
+	flip('.island-desc-hugle');
 })
 
 $('.island-mantrasphere').hover(function () {
-	$('.island-desc-mantrasphere').toggle();
+	flip('.island-desc-mantrasphere');
 })
 
 $('.island-archive').hover(function () {
-	$('.island-desc-archive').toggle();
+	flip('.island-desc-archive');
 })
 
 $('.island-chan').hover(function () {
-	$('.island-desc-chan').toggle();
+	flip('.island-desc-chan');
 })
+
+function flip($txt) {
+	$($txt).toggle();
+	$('.default-desc').toggle();
+}

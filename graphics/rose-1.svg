@@ -45,10 +45,11 @@
       <ellipse
          style="opacity:0.837048;fill:#150000;fill-opacity:0.898873;stroke:#2b0000;stroke-width:0.529167;stroke-opacity:0.977658"
          id="path2"
-         cx="110.66301"
-         cy="93.198471"
-         rx="56.193558"
-         ry="58.500172" />
+         cx="129.48244"
+         cy="64.67775"
+         rx="56.308525"
+         ry="56.078453"
+         transform="matrix(0.97216766,0.23428624,-0.23525281,0.97193421,0,0)" />
       <path
          sodipodi:type="star"
          style="fill:#5100f3;fill-opacity:0.847562;stroke:#2b0000;stroke-width:0.529167;stroke-opacity:0.977658"

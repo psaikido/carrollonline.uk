@@ -1,85 +1,191 @@
-/*
-Error: Invalid CSS after "...template-areas:": expected expression (e.g. 1px, bold), was "<<<<<<< Updated..."
-        on line 6 of sass/_layout.scss
-        from line 3 of ./sass/map.scss
+:root {
+  --paper: #c6b486;
+  --pure-white: #ffffff;
+  --off-white: #aaaaaa;
+  --accent: firebrick;
+  --light: #999999;
+  --mid-grey: #666666;
+  --dark: #333333;
+  --black: #000000; }
 
-1: .map {
-2: 	display: grid;
-3: 	grid-template-columns: 1fr 3fr 1fr;
-4: 	grid-template-rows: 100px auto 200px;
-5: 	grid-template-areas:
-6: <<<<<<< Updated upstream
-7: 		".				.					 ."
-8: =======
-9: 		".				.					 rose"
-10: >>>>>>> Stashed changes
-11: 		". 			  islands 	 ."
+html {
+  --border-major: var(--mid-grey);
+  --bg-major: var(--paper); }
 
-Backtrace:
-sass/_layout.scss:6
-./sass/map.scss:3
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in `expected!'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/script/parser.rb:855:in `assert_expr'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/script/parser.rb:68:in `parse'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:1164:in `sass_script'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:1002:in `value!'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:807:in `block in try_declaration'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/engine.rb:321:in `to_tree'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/home/hughie/.local/share/gem/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/home/hughie/.local/share/gem/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/home/hughie/.local/share/gem/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/home/hughie/.local/share/gem/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/home/hughie/.local/share/gem/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/home/hughie/.local/share/gem/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/home/hughie/.local/share/gem/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/home/hughie/.local/share/gem/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/home/hughie/.local/share/gem/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...template-areas:\": expected expression (e.g. 1px, bold), was \"<<<<<<< Updated...\"\A         on line 6 of sass/_layout.scss\A         from line 3 of ./sass/map.scss\A \A 1: .map {\A 2: 	display: grid;\A 3: 	grid-template-columns: 1fr 3fr 1fr;\A 4: 	grid-template-rows: 100px auto 200px;\A 5: 	grid-template-areas:\A 6: <<<<<<< Updated upstream\A 7: 		\".				.					 .\"\A 8: =======\A 9: 		\".				.					 rose\"\A 10: >>>>>>> Stashed changes\A 11: 		\". 			  islands 	 .\""; }
+.map {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 100px auto 200px;
+  grid-template-areas: ".				.					 rose" ". 			  islands 	 ." "btm-left btm-centre btm-right"; }
+  .map .rose {
+    grid-area: rose; }
+  .map .title {
+    grid-area: btm-right; }
+  .map .legend {
+    grid-area: btm-left; }
+  .map .islands {
+    grid-area: islands;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "nw ne" "sw se"; }
+    .map .islands .island-hugle {
+      grid-area: nw; }
+    .map .islands .island-mantrasphere {
+      grid-area: ne; }
+    .map .islands .island-archive {
+      grid-area: sw; }
+    .map .islands .island-chan {
+      grid-area: se; }
+
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0; }
+
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Old Standard TT', serif;
+  font-size: 1em;
+  background-image: url("../graphics/paper-1.jpg");
+  background-color: var(--paper);
+  background-position: center; }
+
+.grid-wrap {
+  height: calc(100vh - 20px);
+  border: 3px solid var(--dark);
+  margin: 10px;
+  background-size: 80px 80px;
+  background-image: linear-gradient(to right, var(--border-major) 1px, transparent 1px), linear-gradient(to bottom, var(--border-major) 1px, transparent 1px); }
+
+.map {
+  height: 100%; }
+
+.rose {
+  position: relative; }
+  .rose img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 150px;
+    text-shadow: 5px 5px red; }
+    .rose img:hover {
+      animation-name: wibble;
+      animation-duration: 3s; }
+
+@keyframes wibble {
+  from {
+    rotate: 0deg; }
+  to {
+    rotate: 360deg; } }
+.box {
+  border: 3px solid var(--border-major);
+  background-image: url("../graphics/paper-1.jpg");
+  background-position: center;
+  background-size: 100%;
+  margin: 10px; }
+  .box .inner {
+    height: calc(100% - 10px);
+    margin: 5px;
+    padding: 20px;
+    border: 2px solid var(--border-major); }
+  .box.title {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 200px;
+    width: 400px; }
+    .box.title h1 {
+      text-align: center; }
+  .box.legend {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    height: 200px;
+    width: 400px; }
+    .box.legend > h2 {
+      margin: 0 auto;
+      width: 100px; }
+    .box.legend .inner {
+      height: calc(100% - 40px); }
+      .box.legend .inner > * {
+        font-size: 1.3em;
+        color: var(--accent); }
+      .box.legend .inner > .hide {
+        display: none; }
+
+.islands > * {
+  position: relative; }
+  .islands > * h2 {
+    position: absolute;
+    letter-spacing: 8px;
+    font-size: 1.5rem; }
+  .islands > * img {
+    position: absolute;
+    filter: blur(1px); }
+  .islands > *:hover h2 {
+    color: var(--accent); }
+  .islands > *:hover img {
+    width: 60%;
+    height: 60%;
+    filter: blur(0); }
+
+.island-hugle h2 {
+  top: 10%;
+  right: 40%; }
+.island-hugle img {
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 50%; }
+
+.island-mantrasphere h2 {
+  top: 26px;
+  left: 50px; }
+.island-mantrasphere img {
+  width: 50%;
+  height: 50%;
+  top: 84px;
+  left: 84px; }
+
+.island-archive h2 {
+  top: 15px;
+  left: 10px; }
+.island-archive img {
+  width: 50%;
+  height: 50%;
+  top: 16px;
+  left: 143px; }
+
+.island-chan h2 {
+  top: 10%;
+  left: 50%; }
+.island-chan img {
+  width: 50%;
+  height: 50%;
+  top: 0px;
+  left: 0px; }
+
+nav {
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid var(--border-major); }
+  nav ul {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-around; }
+    nav ul li {
+      display: inline-block;
+      width: auto;
+      padding: 3px 10px;
+      flex: 1 1 auto; }
+      nav ul li a {
+        color: var(--hugle-hilight); }
+    nav ul li:not(:last-child) {
+      border-right: 1px solid var(--border-major); }
+
+/*# sourceMappingURL=map.css.map */
