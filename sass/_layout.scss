@@ -3,9 +3,21 @@
 	grid-template-columns: 1fr 3fr 1fr;
 	grid-template-rows: 100px auto 200px;
 	grid-template-areas:
-		".				.					 ."
+		".				.					 rose"
 		". 			  islands 	 ."
 		"btm-left btm-centre btm-right";
+
+	.rose {
+		grid-area: rose;
+	}
+
+	.title {
+		grid-area: btm-right;
+	}
+
+	.legend {
+		grid-area: btm-left;
+	}
 
 	.islands {
 		grid-area: islands;
@@ -31,14 +43,6 @@
 		.island-chan {
 			grid-area: se;
 		}
-	}
-
-	.title {
-		grid-area: btm-right;
-	}
-
-	.legend {
-		grid-area: btm-left;
 	}
 }
 

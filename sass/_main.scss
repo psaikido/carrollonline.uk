@@ -30,13 +30,24 @@ body {
 
 .map {
 	height: 100%;
-	background-image: url('../graphics/rose.png');
-	background-size: 100px;
-	background-repeat: no-repeat;
-	background-position: 99% 9px;
+	// background-image: url('../graphics/rose.png');
+	// background-size: 100px;
+	// background-repeat: no-repeat;
+	// background-position: 99% 9px;
+	//
+	// @include screen-width('medium') {
+	// 	background-size: 200px;
+	// }
+}
 
-	@include screen-width('medium') {
-		background-size: 200px;
+.rose {
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		height: 150px;
 	}
 }
 

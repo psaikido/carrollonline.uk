@@ -2,3 +2,4 @@
 _site/
 bin/
 zz-git-archive
+*.css.map
