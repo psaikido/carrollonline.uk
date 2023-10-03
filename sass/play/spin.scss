@@ -23,7 +23,7 @@ body {
   to { transform: rotateY(-360deg); }
 }
 
-$width: 50px;
+$width: 25px;
 .panel {
   position: absolute;
   transform: translate(-50%, -70%) rotateY(var(--angle)) translateZ(190px); 
@@ -37,18 +37,19 @@ $width: 50px;
 .panel::before {
   position: absolute;
   left: var(--left);
-  content: "༺  ༀ ༌མ ནི  ༌ པ དྨེ  ༌ ཧཱུྃ  ༔ ༻";
+  content: " ༄༅༎ ༀ ༌མ ནི  ༌ པ དྨེ  ༌ ཧཱུྃ  ༔ ";
   font-size: 96px;
+	letter-spacing: 10px;
   width: max-content;
   color: hsl(var(--hue), 60%, 60%);
 }
 
 
-@for $i from 0 to 24 {
+@for $i from 0 to 48 {
   .panel:nth-child(#{$i + 1}) {
     --left: #{$width * $i * -1};
-    --hue: #{360 / 24 * $i};
-    --angle: #{360deg / 24 * $i};
+    --hue: #{360 / 48 * $i};
+    --angle: #{360deg / 48 * $i};
   }
 }
 

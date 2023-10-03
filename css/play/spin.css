@@ -23,15 +23,16 @@ body {
 .panel {
   position: absolute;
   transform: translate(-50%, -70%) rotateY(var(--angle)) translateZ(190px);
-  width: 50px;
+  width: 25px;
   height: 200px;
   overflow: hidden; }
 
 .panel::before {
   position: absolute;
   left: var(--left);
-  content: "༺  ༀ ༌མ ནི  ༌ པ དྨེ  ༌ ཧཱུྃ  ༔ ༻";
+  content: " ༄༅༎ ༀ ༌མ ནི  ༌ པ དྨེ  ༌ ཧཱུྃ  ༔ ";
   font-size: 96px;
+  letter-spacing: 10px;
   width: max-content;
   color: hsl(var(--hue), 60%, 60%); }
 
@@ -41,119 +42,239 @@ body {
   --angle: 0deg; }
 
 .panel:nth-child(2) {
+  --left: -25px;
+  --hue: 7.5;
+  --angle: 7.5deg; }
+
+.panel:nth-child(3) {
   --left: -50px;
   --hue: 15;
   --angle: 15deg; }
 
-.panel:nth-child(3) {
+.panel:nth-child(4) {
+  --left: -75px;
+  --hue: 22.5;
+  --angle: 22.5deg; }
+
+.panel:nth-child(5) {
   --left: -100px;
   --hue: 30;
   --angle: 30deg; }
 
-.panel:nth-child(4) {
+.panel:nth-child(6) {
+  --left: -125px;
+  --hue: 37.5;
+  --angle: 37.5deg; }
+
+.panel:nth-child(7) {
   --left: -150px;
   --hue: 45;
   --angle: 45deg; }
 
-.panel:nth-child(5) {
+.panel:nth-child(8) {
+  --left: -175px;
+  --hue: 52.5;
+  --angle: 52.5deg; }
+
+.panel:nth-child(9) {
   --left: -200px;
   --hue: 60;
   --angle: 60deg; }
 
-.panel:nth-child(6) {
+.panel:nth-child(10) {
+  --left: -225px;
+  --hue: 67.5;
+  --angle: 67.5deg; }
+
+.panel:nth-child(11) {
   --left: -250px;
   --hue: 75;
   --angle: 75deg; }
 
-.panel:nth-child(7) {
+.panel:nth-child(12) {
+  --left: -275px;
+  --hue: 82.5;
+  --angle: 82.5deg; }
+
+.panel:nth-child(13) {
   --left: -300px;
   --hue: 90;
   --angle: 90deg; }
 
-.panel:nth-child(8) {
+.panel:nth-child(14) {
+  --left: -325px;
+  --hue: 97.5;
+  --angle: 97.5deg; }
+
+.panel:nth-child(15) {
   --left: -350px;
   --hue: 105;
   --angle: 105deg; }
 
-.panel:nth-child(9) {
+.panel:nth-child(16) {
+  --left: -375px;
+  --hue: 112.5;
+  --angle: 112.5deg; }
+
+.panel:nth-child(17) {
   --left: -400px;
   --hue: 120;
   --angle: 120deg; }
 
-.panel:nth-child(10) {
+.panel:nth-child(18) {
+  --left: -425px;
+  --hue: 127.5;
+  --angle: 127.5deg; }
+
+.panel:nth-child(19) {
   --left: -450px;
   --hue: 135;
   --angle: 135deg; }
 
-.panel:nth-child(11) {
+.panel:nth-child(20) {
+  --left: -475px;
+  --hue: 142.5;
+  --angle: 142.5deg; }
+
+.panel:nth-child(21) {
   --left: -500px;
   --hue: 150;
   --angle: 150deg; }
 
-.panel:nth-child(12) {
+.panel:nth-child(22) {
+  --left: -525px;
+  --hue: 157.5;
+  --angle: 157.5deg; }
+
+.panel:nth-child(23) {
   --left: -550px;
   --hue: 165;
   --angle: 165deg; }
 
-.panel:nth-child(13) {
+.panel:nth-child(24) {
+  --left: -575px;
+  --hue: 172.5;
+  --angle: 172.5deg; }
+
+.panel:nth-child(25) {
   --left: -600px;
   --hue: 180;
   --angle: 180deg; }
 
-.panel:nth-child(14) {
+.panel:nth-child(26) {
+  --left: -625px;
+  --hue: 187.5;
+  --angle: 187.5deg; }
+
+.panel:nth-child(27) {
   --left: -650px;
   --hue: 195;
   --angle: 195deg; }
 
-.panel:nth-child(15) {
+.panel:nth-child(28) {
+  --left: -675px;
+  --hue: 202.5;
+  --angle: 202.5deg; }
+
+.panel:nth-child(29) {
   --left: -700px;
   --hue: 210;
   --angle: 210deg; }
 
-.panel:nth-child(16) {
+.panel:nth-child(30) {
+  --left: -725px;
+  --hue: 217.5;
+  --angle: 217.5deg; }
+
+.panel:nth-child(31) {
   --left: -750px;
   --hue: 225;
   --angle: 225deg; }
 
-.panel:nth-child(17) {
+.panel:nth-child(32) {
+  --left: -775px;
+  --hue: 232.5;
+  --angle: 232.5deg; }
+
+.panel:nth-child(33) {
   --left: -800px;
   --hue: 240;
   --angle: 240deg; }
 
-.panel:nth-child(18) {
+.panel:nth-child(34) {
+  --left: -825px;
+  --hue: 247.5;
+  --angle: 247.5deg; }
+
+.panel:nth-child(35) {
   --left: -850px;
   --hue: 255;
   --angle: 255deg; }
 
-.panel:nth-child(19) {
+.panel:nth-child(36) {
+  --left: -875px;
+  --hue: 262.5;
+  --angle: 262.5deg; }
+
+.panel:nth-child(37) {
   --left: -900px;
   --hue: 270;
   --angle: 270deg; }
 
-.panel:nth-child(20) {
+.panel:nth-child(38) {
+  --left: -925px;
+  --hue: 277.5;
+  --angle: 277.5deg; }
+
+.panel:nth-child(39) {
   --left: -950px;
   --hue: 285;
   --angle: 285deg; }
 
-.panel:nth-child(21) {
+.panel:nth-child(40) {
+  --left: -975px;
+  --hue: 292.5;
+  --angle: 292.5deg; }
+
+.panel:nth-child(41) {
   --left: -1000px;
   --hue: 300;
   --angle: 300deg; }
 
-.panel:nth-child(22) {
+.panel:nth-child(42) {
+  --left: -1025px;
+  --hue: 307.5;
+  --angle: 307.5deg; }
+
+.panel:nth-child(43) {
   --left: -1050px;
   --hue: 315;
   --angle: 315deg; }
 
-.panel:nth-child(23) {
+.panel:nth-child(44) {
+  --left: -1075px;
+  --hue: 322.5;
+  --angle: 322.5deg; }
+
+.panel:nth-child(45) {
   --left: -1100px;
   --hue: 330;
   --angle: 330deg; }
 
-.panel:nth-child(24) {
+.panel:nth-child(46) {
+  --left: -1125px;
+  --hue: 337.5;
+  --angle: 337.5deg; }
+
+.panel:nth-child(47) {
   --left: -1150px;
   --hue: 345;
   --angle: 345deg; }
+
+.panel:nth-child(48) {
+  --left: -1175px;
+  --hue: 352.5;
+  --angle: 352.5deg; }
 
 .screen {
   position: absolute;
