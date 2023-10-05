@@ -1,0 +1,30 @@
+body {
+  background-color: #000;;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.scene {
+  position: relative;
+	height: 100vh;
+	width: 100vw;
+}
+
+.stripe {
+	position: absolute;
+	top: 0;
+	left: var(--stripe-left);
+  background: hsl(var(--hue), 100%, 50%);
+
+	height: 90vh;
+	width: 9px;
+	margin-right: 3px;
+}
+
+@for $i from 1 through 100 {
+	.stripe:nth-child(#{$i}) {
+		--stripe-left: #{$i * 10 + 10}px;
+    --hue: #{360 / 100 * $i};
+	}
+}
+

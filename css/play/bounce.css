@@ -1,0 +1,112 @@
+:root {
+  --box-clr: #0ff7;
+  --rotate-speed: 30s;
+  --bounce-speed: 1.5s; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 75px;
+  min-height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 10em;
+  perspective-origin: 50% calc(50% - 2em);
+  overflow: hidden; }
+
+.scene {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: sceneRotate var(--rotate-speed) infinite linear; }
+@keyframes sceneRotate {
+  to {
+    transform: rotateY(360deg); } }
+.ball {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: absolute;
+  left: -0.5em;
+  bottom: 1em;
+  transform-style: preserve-3d;
+  background: lightblue;
+  background-image: radial-gradient(circle at top, lightblue, #000);
+  animation: ballBounce var(--bounce-speed) infinite ease-out, sceneRotate var(--rotate-speed) infinite linear reverse; }
+@keyframes ballBounce {
+  0%, 100% {
+    bottom: 0.5em; }
+  50% {
+    bottom: 3em;
+    animation-timing-function: ease-in; } }
+.cube {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  bottom: -1em;
+  left: -1em;
+  transform-style: preserve-3d;
+  animation: cubeHeight var(--bounce-speed) infinite linear; }
+@keyframes cubeHeight {
+  0%, 100% {
+    height: 1.5em; }
+  8%, 93.5% {
+    height: 2em; } }
+  .cube .left, .cube .right, .cube .front, .cube .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--box-clr);
+    box-shadow: 0 0 .5em #000a inset; }
+  .cube .front {
+    transform: translateZ(1em); }
+  .cube .left {
+    transform: rotateY(-90deg) translateZ(1em); }
+  .cube .right {
+    transform: rotateY(90deg) translateZ(1em); }
+  .cube .back {
+    transform: rotate(180deg) translateZ(-1em); }
+  .cube .top {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    transform: translateY(-50%) rotateX(90deg);
+    background: var(--box-clr);
+    box-shadow: 0 0 .5em #000a inset; }
+    .cube .top .ball-shadow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(#0007, #0000 50%);
+      animation: ballShadowBounce var(--bounce-speed) infinite ease-out; }
+@keyframes ballShadowBounce {
+  0%, 8%, 93.5%, 100% {
+    transform: scale(1);
+    opacity: 1; }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+    animation-timing-function: ease-in; } }
+  .cube .bottom {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    transform: translateY(50%) rotateX(90deg);
+    background: #0007;
+    box-shadow: 0 0 0.5em #000; }
+
+.floor {
+  width: 15em;
+  height: 15em;
+  background-image: radial-gradient(#0000, #000 75%), repeating-conic-gradient(from 45deg, #111 0deg 90deg, #333 90deg 180deg);
+  background-size: 100%, 1em 1em;
+  position: absolute;
+  transform: translate(-50%, -50%) rotateX(90deg);
+  top: 1em;
+  transform-style: preserve-3d; }
+
+/*# sourceMappingURL=bounce.css.map */
