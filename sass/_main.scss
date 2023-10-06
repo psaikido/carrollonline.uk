@@ -4,7 +4,8 @@ html, body {
 	padding: 0;
 }
 
-/* include border and padding in element width and height */
+*::before,
+*::after,
 * {
   box-sizing: border-box;
 }
@@ -35,7 +36,7 @@ body {
 .rose {
 	position: relative;
 
-	img {
+	img.img-rose {
 		position: absolute;
 		top: 20px;
 		right: 20px;
@@ -43,13 +44,45 @@ body {
 		text-shadow: 5px 5px red;
 
 		&:hover {
-			animation-name: wibble;
+			animation-name: spinRose;
 			animation-duration: 3s;
+		}
+	}
+
+	.island-juegos {
+		display: none;
+
+		h2 {
+			position: absolute;
+			top: 162px;
+			left: 40%;
+		}
+		
+		img {
+			position: absolute;
+			width: 30%;
+			height: 30%;
+			top: 230px;
+			left: 40%;
+			rotate: 165deg;
+			transform: skew(40deg, -70deg);
+		}
+
+		&:hover {
+			h2 {
+				color: var(--accent);
+			}
+
+			img {
+				width: 40%;
+				height: 40%;
+				filter: blur(0);
+			}
 		}
 	}
 }
 
-@keyframes wibble {
+@keyframes spinRose {
   from {
 		rotate: 0deg;
   }
@@ -194,5 +227,3 @@ body {
 		left: 0px;
 	}
 }
-
-

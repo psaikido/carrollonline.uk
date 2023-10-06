@@ -14,6 +14,14 @@ $('.island-chan').hover(function () {
 	flip('.island-desc-chan');
 })
 
+$('.island-juegos').hover(function () {
+	flip('.island-desc-juegos');
+})
+
+$('.img-rose').click(function () {
+	$('.island-juegos').toggle();
+})
+
 function flip($txt) {
 	$($txt).toggle();
 	$('.default-desc').toggle();
