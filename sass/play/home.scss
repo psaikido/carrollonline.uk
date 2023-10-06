@@ -1,14 +1,2 @@
-*::before,
-*::after,
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-body {
-  background-color: #000;;
-  color: #fff;
-  min-height: 100vh;
-}
-
+@import "home/_colors";
+@import "home/_main";

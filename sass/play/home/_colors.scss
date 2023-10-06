@@ -1,0 +1,26 @@
+:root {
+	--silver: #c4bbafff;
+	--cinereous: #a5978bff;
+	--liver: #5c4742ff;
+	--redwood: #8d5b4cff;
+	--caput-mortuum: #5a2a27ff;
+
+	--black: #020202ff;
+	--van-dyke: #503b31ff;
+	--wenge: #705d56ff;
+	--cool-gray: #9097c0ff;
+	--powder-blue: #a7bbecff;
+}
+
+html {
+	// --bg-1: var(--caput-mortuum);
+	// --bg-2: var(--redwood);
+	// --bg-3: var(--liver);
+	// --bg-4: var(--cinereous);
+	// --bg-5: var(--silver);
+	--bg-1: var(--black);
+	--bg-2: var(--van-dyke);
+	--bg-3: var(--wenge);
+	--bg-4: var(--cool-gray);
+	--bg-5: var(--powder-blue);
+}
