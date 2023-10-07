@@ -1,11 +1,13 @@
 :root {
 	--silver: #c4bbafff;
-	--cinereous: #a5978bff;
-	--liver: #5c4742ff;
-	--redwood: #8d5b4cff;
-	--caput-mortuum: #5a2a27ff;
+	// --cinereous: #a5978bff;
+	// --liver: #5c4742ff;
+	// --redwood: #8d5b4cff;
+	// --caput-mortuum: #5a2a27ff;
 
+	// https://coolors.co/020202-503b31-705d56-9097c0-a7bbec
 	--black: #020202ff;
+	--grey: #333a;
 	--van-dyke: #503b31ff;
 	--wenge: #705d56ff;
 	--cool-gray: #9097c0ff;
@@ -23,4 +25,6 @@ html {
 	--bg-3: var(--wenge);
 	--bg-4: var(--cool-gray);
 	--bg-5: var(--powder-blue);
+	--txt-1: var(--black);
+	--txt-2: var(--grey);
 }

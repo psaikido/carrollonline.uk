@@ -4,23 +4,36 @@
 	<meta charset="UTF-8">
 	<title>play</title>
 	<link rel="stylesheet" type="text/css" href="../css/play/home.css" />
+
+	<script>
+		function navToggle() {
+			const nav = document.querySelector('.nav');
+			nav.classList.toggle('closed');
+		}
+	</script>
 </head>
 <body>
 
-	<ul class="nav">
-		<li>
-			<a href="../index.html">carrollonline</a>
-		</li>
-		<li>
-			<a href="mani.html">mani</a>
-		</li>
-		<li>
-			<a href="bounce.html">bounce</a>
-		</li>
-		<li>
-			<a href="stripes.html">stripes</a>
-		</li>
-	</ul>
+	<div class="wrap">
+		<button class="nav-toggle" onclick="navToggle();">
+			<span class="hamburger">&nbsp;</span>
+		</button>
+
+		<ul class="nav closed">
+			<li>
+				<a href="../index.html">carrollonline</a>
+			</li>
+			<li>
+				<a href="mani.html">mani</a>
+			</li>
+			<li>
+				<a href="bounce.html">bounce</a>
+			</li>
+			<li>
+				<a href="stripes.html">stripes</a>
+			</li>
+		</ul>
+	</div>
 	
 </body>
 </html>

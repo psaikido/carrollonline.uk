@@ -1,0 +1,68 @@
+:root {
+	--ham-width: 50px;
+	--ham-height: 8px;
+}
+
+.nav-toggle {
+	width: var(--ham-width);
+	position: absolute;
+	top: 40px;
+	left: calc(50% - 10px);
+	background: none;
+	border: none;
+}
+
+.hamburger,
+.hamburger::before, 
+.hamburger::after {
+	background-color: var(--txt-2);
+	width: var(--ham-width);
+	height: var(--ham-height);
+}
+
+.hamburger {
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.hamburger::before, 
+.hamburger::after {
+	position: absolute;
+	left: 0;
+	content: '';
+}
+
+.hamburger::before {
+	top: 12px;
+}
+
+.hamburger::after {
+	bottom: 12px;
+}
+
+ul {
+	margin-top: 25px;
+	height: calc(100% - 25px);
+	list-style: none;
+	background-color: var(--bg-5);
+	border: var(--sizing) solid var(--bg-4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	flex-direction: column;
+	flex-grow: 1;
+	padding-block: 20px;
+	visibility: visible;
+
+	&.closed {
+		visibility: hidden;
+	}
+
+	li {
+		width: 100%;
+		padding-inline: 10px;
+	}
+}

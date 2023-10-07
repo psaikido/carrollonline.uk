@@ -1,10 +1,7 @@
 :root {
   --silver: #c4bbafff;
-  --cinereous: #a5978bff;
-  --liver: #5c4742ff;
-  --redwood: #8d5b4cff;
-  --caput-mortuum: #5a2a27ff;
   --black: #020202ff;
+  --grey: #333a;
   --van-dyke: #503b31ff;
   --wenge: #705d56ff;
   --cool-gray: #9097c0ff;
@@ -15,33 +12,96 @@ html {
   --bg-2: var(--van-dyke);
   --bg-3: var(--wenge);
   --bg-4: var(--cool-gray);
-  --bg-5: var(--powder-blue); }
+  --bg-5: var(--powder-blue);
+  --txt-1: var(--black);
+  --txt-2: var(--grey); }
 
 *::before,
 *::after,
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  --sizing: 60px; }
 
 body {
   background-color: var(--bg-2);
-  color: #fff;
   min-height: 100vh;
-  font-size: 2em;
-  color: var(--silver);
-  border: 150px solid var(--bg-1);
+  font-size: 1.5em;
+  color: var(--txt-1);
+  border: var(--sizing) solid var(--bg-1);
+  padding: var(--sizing);
   display: grid;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'main'; }
 
-ul {
-  list-style: none;
+.wrap {
+  grid-area: main;
   background-color: var(--bg-4);
-  border: 100px solid var(--bg-3);
-  padding: 40px; }
+  border: var(--sizing) solid var(--bg-3);
+  height: 100%;
+  position: relative; }
 
 a, a:link, a:visited {
-  color: var(--black); }
+  color: var(--bg-2); }
+
+:root {
+  --ham-width: 50px;
+  --ham-height: 8px; }
+
+.nav-toggle {
+  width: var(--ham-width);
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 10px);
+  background: none;
+  border: none; }
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background-color: var(--txt-2);
+  width: var(--ham-width);
+  height: var(--ham-height); }
+
+.hamburger {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0; }
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+  left: 0;
+  content: ''; }
+
+.hamburger::before {
+  top: 12px; }
+
+.hamburger::after {
+  bottom: 12px; }
+
+ul {
+  margin-top: 25px;
+  height: calc(100% - 25px);
+  list-style: none;
+  background-color: var(--bg-5);
+  border: var(--sizing) solid var(--bg-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-block: 20px;
+  visibility: visible; }
+  ul.closed {
+    visibility: hidden; }
+  ul li {
+    width: 100%;
+    padding-inline: 10px; }
 
 /*# sourceMappingURL=home.css.map */
