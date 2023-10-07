@@ -14,15 +14,20 @@ html {
 
 .map {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 100px auto 200px;
-  grid-template-areas: ".				.					 rose" ". 			  islands 	 ." "btm-left btm-centre btm-right"; }
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 1fr 1fr;
+  grid-template-areas: "islands" "btm-left" "btm-right" "rose"; }
   .map .rose {
     grid-area: rose; }
   .map .title {
     grid-area: btm-right; }
   .map .legend {
     grid-area: btm-left; }
+  @media only screen and (min-width: 900px) {
+    .map {
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: 100px auto 200px;
+      grid-template-areas: ".				.					 rose" ". 			  islands 	 ." "btm-left btm-centre btm-right"; } }
   .map .islands {
     grid-area: islands;
     display: grid;
@@ -38,6 +43,84 @@ html {
     .map .islands .island-chan {
       grid-area: se; }
 
+.islands > * {
+  position: relative; }
+  .islands > * h2 {
+    position: absolute; }
+    @media only screen and (min-width: 900px) {
+      .islands > * h2 {
+        letter-spacing: 8px;
+        font-size: 1.5rem; } }
+  .islands > * img {
+    position: absolute;
+    filter: blur(1px); }
+  .islands > *:hover h2 {
+    color: var(--accent); }
+  .islands > *:hover img {
+    width: 60%;
+    height: 60%;
+    filter: blur(0); }
+
+.island-hugle img {
+  width: 30%;
+  height: 30%;
+  top: 40%;
+  left: 30%; }
+@media only screen and (min-width: 900px) {
+  .island-hugle h2 {
+    top: 10%;
+    right: 40%; }
+  .island-hugle img {
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 50%; } }
+
+.island-mantrasphere img {
+  width: 30%;
+  height: 30%;
+  top: 44px;
+  left: 34px; }
+@media only screen and (min-width: 900px) {
+  .island-mantrasphere h2 {
+    top: 26px;
+    left: 50px; }
+  .island-mantrasphere img {
+    width: 50%;
+    height: 50%;
+    top: 84px;
+    left: 84px; } }
+
+.island-archive img {
+  width: 40%;
+  height: 40%;
+  top: 56px;
+  left: 90px; }
+@media only screen and (min-width: 900px) {
+  .island-archive h2 {
+    top: 15px;
+    left: 10px; }
+  .island-archive img {
+    width: 50%;
+    height: 50%;
+    top: 16px;
+    left: 143px; } }
+
+.island-chan img {
+  width: 40%;
+  height: 40%;
+  top: 10px;
+  right: 20px; }
+@media only screen and (min-width: 900px) {
+  .island-chan h2 {
+    top: 10%;
+    left: 50%; }
+  .island-chan img {
+    width: 50%;
+    height: 50%;
+    top: 0px;
+    left: 0px; } }
+
 html, body {
   scroll-behavior: smooth;
   margin: 0;
@@ -51,6 +134,7 @@ html, body {
 body {
   font-family: 'Old Standard TT', serif;
   font-size: 1em;
+  color: var(--dark);
   background-image: url("../graphics/paper-1.jpg");
   background-color: var(--paper);
   background-position: center; }
@@ -71,25 +155,32 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    height: 150px;
+    height: 50px;
     text-shadow: 5px 5px red; }
     .rose img.img-rose:hover {
       animation-name: spinRose;
       animation-duration: 3s; }
+  @media only screen and (min-width: 900px) {
+    .rose img.img-rose {
+      right: 20px;
+      height: 150px; } }
   .rose .island-juegos {
     display: none; }
-    .rose .island-juegos h2 {
-      position: absolute;
-      top: 162px;
-      left: 40%; }
     .rose .island-juegos img {
       position: absolute;
       width: 30%;
       height: 30%;
-      top: 230px;
+      top: 30px;
       left: 40%;
       rotate: 165deg;
       transform: skew(40deg, -70deg); }
+    @media only screen and (min-width: 900px) {
+      .rose .island-juegos h2 {
+        position: absolute;
+        top: 162px;
+        left: 40%; }
+      .rose .island-juegos img {
+        top: 230px; } }
     .rose .island-juegos:hover h2 {
       color: var(--accent); }
     .rose .island-juegos:hover img {
@@ -109,86 +200,41 @@ body {
   background-size: 100%;
   margin: 10px; }
   .box .inner {
-    height: calc(100% - 10px);
-    margin: 5px;
-    padding: 20px;
-    border: 2px solid var(--border-major); }
+    border: 2px solid var(--border-major);
+    padding: 5px; }
   .box.title {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    height: 200px;
-    width: 400px; }
+    width: auto;
+    height: auto; }
     .box.title h1 {
       text-align: center; }
-  .box.legend {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    height: 200px;
-    width: 400px; }
-    .box.legend > h2 {
-      margin: 0 auto;
-      width: 100px; }
-    .box.legend .inner {
-      height: calc(100% - 40px); }
-      .box.legend .inner > * {
-        font-size: 1.3em;
-        color: var(--accent); }
-      .box.legend .inner > .hide {
-        display: none; }
-
-.islands > * {
-  position: relative; }
-  .islands > * h2 {
-    position: absolute;
-    letter-spacing: 8px;
-    font-size: 1.5rem; }
-  .islands > * img {
-    position: absolute;
-    filter: blur(1px); }
-  .islands > *:hover h2 {
-    color: var(--accent); }
-  .islands > *:hover img {
-    width: 60%;
-    height: 60%;
-    filter: blur(0); }
-
-.island-hugle h2 {
-  top: 10%;
-  right: 40%; }
-.island-hugle img {
-  width: 50%;
-  height: 50%;
-  top: 0;
-  left: 50%; }
-
-.island-mantrasphere h2 {
-  top: 26px;
-  left: 50px; }
-.island-mantrasphere img {
-  width: 50%;
-  height: 50%;
-  top: 84px;
-  left: 84px; }
-
-.island-archive h2 {
-  top: 15px;
-  left: 10px; }
-.island-archive img {
-  width: 50%;
-  height: 50%;
-  top: 16px;
-  left: 143px; }
-
-.island-chan h2 {
-  top: 10%;
-  left: 50%; }
-.island-chan img {
-  width: 50%;
-  height: 50%;
-  top: 0px;
-  left: 0px; }
+    @media only screen and (min-width: 900px) {
+      .box.title .inner {
+        height: calc(100% - 10px);
+        margin: 5px;
+        padding: 20px; }
+      .box.title.title {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        height: 200px;
+        width: 400px; } }
+  .box.legend > h2 {
+    margin: 0 auto;
+    width: 100px; }
+  .box.legend .inner {
+    height: calc(100% - 40px); }
+    .box.legend .inner > * {
+      font-size: 1.3em;
+      color: var(--accent); }
+    .box.legend .inner > .hide {
+      display: none; }
+  @media only screen and (min-width: 900px) {
+    .box.legend {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      height: 200px;
+      width: 400px; } }
 
 nav {
   margin: 0 auto;

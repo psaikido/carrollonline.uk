@@ -13,7 +13,7 @@ html, body {
 body {
 	font-family: 'Old Standard TT', serif;
 	font-size: 1em;
-
+	color: var(--dark);
 	background-image: url('../graphics/paper-1.jpg');
 	background-color: var(--paper);
 	background-position: center;
@@ -40,7 +40,7 @@ body {
 		position: absolute;
 		top: 20px;
 		right: 20px;
-		height: 150px;
+		height: 50px;
 		text-shadow: 5px 5px red;
 
 		&:hover {
@@ -49,23 +49,36 @@ body {
 		}
 	}
 
+	@include screen-width(medium) {
+		img.img-rose {
+			right: 20px;
+			height: 150px;
+		}
+	}
+
 	.island-juegos {
 		display: none;
 
-		h2 {
-			position: absolute;
-			top: 162px;
-			left: 40%;
-		}
-		
 		img {
 			position: absolute;
 			width: 30%;
 			height: 30%;
-			top: 230px;
+			top: 30px;
 			left: 40%;
 			rotate: 165deg;
 			transform: skew(40deg, -70deg);
+		}
+
+		@include screen-width(medium) {
+			h2 {
+				position: absolute;
+				top: 162px;
+				left: 40%;
+			}
+		
+			img {
+				top: 230px;
+			}
 		}
 
 		&:hover {
@@ -100,31 +113,36 @@ body {
 	margin: 10px;
 
 	.inner {
-		height: calc(100% - 10px);
-		margin: 5px;
-		padding: 20px;
 		border: 2px solid var(--border-major);
+		padding: 5px;
 	}
 
 	&.title {
-		position: absolute;
-		bottom: 10px;
-		right: 10px;
-		height: 200px;
-		width: 400px;
+		width: auto;
+		height: auto;
 
 		h1 {
 			text-align: center;
 		}
+
+		@include screen-width(medium) {
+			.inner {
+				height: calc(100% - 10px);
+				margin: 5px;
+				padding: 20px;
+			}
+			
+			&.title {
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				height: 200px;
+				width: 400px;
+			}
+		}
 	}
 
 	&.legend {
-		position: absolute;
-		bottom: 10px;
-		left: 10px;
-		height: 200px;
-		width: 400px;
-
 		& > h2 {
 			margin: 0 auto;
 			width: 100px;
@@ -143,87 +161,14 @@ body {
 			}
 		}
 	}
-}
 
-.islands > * {
-	position: relative;
-
-	h2 {
-		position: absolute;
-		letter-spacing: 8px;
-		font-size: 1.5rem;
-	}
-
-	img {
-		position: absolute;
-		filter: blur(1px);
-	}
-
-	&:hover {
-		h2 {
-			color: var(--accent);
+	@include screen-width(medium) {
+		&.legend {
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			height: 200px;
+			width: 400px;
 		}
-
-		img {
-			width: 60%;
-			height: 60%;
-			filter: blur(0);
-		}
-	}
-}
-
-.island-hugle {
-	h2 {
-		top: 10%;
-		right: 40%;
-	}
-	
-	img {
-		width: 50%;
-		height: 50%;
-		top: 0;
-		left: 50%;
-	}
-}
-
-.island-mantrasphere {
-	h2 {
-		top: 26px;
-		left: 50px;
-	}
-	
-	img {
-		width: 50%;
-		height: 50%;
-		top: 84px;
-		left: 84px;
-	}
-}
-
-.island-archive {
-	h2 {
-		top: 15px;
-		left: 10px;
-	}
-	
-	img {
-		width: 50%;
-		height: 50%;
-		top: 16px;
-		left: 143px;
-	}
-}
-
-.island-chan {
-	h2 {
-		top: 10%;
-		left: 50%;
-	}
-	
-	img {
-		width: 50%;
-		height: 50%;
-		top: 0px;
-		left: 0px;
 	}
 }
