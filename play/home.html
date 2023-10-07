@@ -7,6 +7,9 @@
 
 	<script>
 		function navToggle() {
+			const ham = document.querySelector('.nav-toggle');
+			ham.classList.toggle('closed');
+
 			const nav = document.querySelector('.nav');
 			nav.classList.toggle('closed');
 		}
