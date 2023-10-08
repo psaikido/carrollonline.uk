@@ -42,7 +42,7 @@
 	}
 }
 
-.nav-toggle.closed {
+.nav-toggle.x {
 	.hamburger {
 		transition: rotate 350ms ease-in-out;
 		rotate: 45deg;
@@ -55,6 +55,12 @@
 	.hamburger::after {
 		rotate: -90deg;
 		transform: translateX(-12px);
+	}
+
+	.hamburger,
+	.hamburger::before, 
+	.hamburger::after {
+		background-color: var(--silver);
 	}
 }
 
@@ -71,14 +77,39 @@ ul {
 	flex-direction: column;
 	flex-grow: 1;
 	padding-block: 20px;
-	visibility: visible;
+	// visibility: hidden;
 
-	&.closed {
-		visibility: hidden;
+	&.open {
+		// visibility: visible;
 	}
 
 	li {
 		width: 100%;
 		padding-inline: 10px;
+	}
+}
+
+body {
+	transition: all 300ms ease-in;
+}
+
+body.open {
+	transition: all 500ms ease-in;
+
+	border-color: var(--bg-5);
+	background-color: var(--bg-4);
+
+	.wrap {
+		border-color: var(--bg-3);
+		background-color: var(--bg-2);
+
+		ul.open {
+			border-color: var(--bg-2);
+			background-color: var(--bg-1);
+
+			a, a:link, a:visited {
+				color: var(--silver);
+			}
+		}
 	}
 }

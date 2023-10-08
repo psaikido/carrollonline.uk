@@ -79,14 +79,18 @@ a, a:link, a:visited {
   .nav-toggle .hamburger::after {
     bottom: 12px; }
 
-.nav-toggle.closed .hamburger {
+.nav-toggle.x .hamburger {
   transition: rotate 350ms ease-in-out;
   rotate: 45deg; }
-.nav-toggle.closed .hamburger::before {
+.nav-toggle.x .hamburger::before {
   display: none; }
-.nav-toggle.closed .hamburger::after {
+.nav-toggle.x .hamburger::after {
   rotate: -90deg;
   transform: translateX(-12px); }
+.nav-toggle.x .hamburger,
+.nav-toggle.x .hamburger::before,
+.nav-toggle.x .hamburger::after {
+  background-color: var(--silver); }
 
 ul {
   margin-top: 25px;
@@ -100,12 +104,25 @@ ul {
   gap: 10px;
   flex-direction: column;
   flex-grow: 1;
-  padding-block: 20px;
-  visibility: visible; }
-  ul.closed {
-    visibility: hidden; }
+  padding-block: 20px; }
   ul li {
     width: 100%;
     padding-inline: 10px; }
+
+body {
+  transition: all 300ms ease-in; }
+
+body.open {
+  transition: all 500ms ease-in;
+  border-color: var(--bg-5);
+  background-color: var(--bg-4); }
+  body.open .wrap {
+    border-color: var(--bg-3);
+    background-color: var(--bg-2); }
+    body.open .wrap ul.open {
+      border-color: var(--bg-2);
+      background-color: var(--bg-1); }
+      body.open .wrap ul.open a, body.open .wrap ul.open a:link, body.open .wrap ul.open a:visited {
+        color: var(--silver); }
 
 /*# sourceMappingURL=home.css.map */
