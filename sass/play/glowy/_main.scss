@@ -11,21 +11,14 @@ body {
 	font-size: 1.5em;
 	color: var(--txt-1);
 	background-color: var(--bg-1);
-	// display: grid;
-	// align-items: center;
-	// justify-content: center;
-	// grid-template-columns: 1fr;
-	// grid-template-areas: 'main';
 }
 
 .wrap {
-	// grid-area: main;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
-	// z-index: 1;
 }
 
 .card {
@@ -36,8 +29,6 @@ body {
 	text-align: center;
 	padding: 20px;
 	background: linear-gradient(0deg, var(--bg-1), var(--bg-3));
-	// background: black;
-	// z-index: 2;
 }
 
 .glow::before {
@@ -45,38 +36,33 @@ body {
 	position: absolute;
 	top: -5px;
 	left: -5px;
-	// background: var(--bg-3);
 	background: linear-gradient(45deg, var(--brd-1), var(--brd-2), var(--brd-3), var(--brd-4), var(--brd-5), var(--brd-6), var(--brd-7), var(--brd-8), var(--brd-9));
 	background-size: 400%;
 	width: calc(100% + 10px);
 	height: calc(100% + 10px);
 	z-index: -1;
-	animation: swirl 40s linear infinite;
+	animation: swirl 4s linear infinite;
 }
 
 .card:nth-child(2).glow::before {
-	animation-delay: 2s;
+	animation-delay: 500ms;
 }
 
 .card:nth-child(3).glow::before {
-	animation-delay: 4s;
+	animation-delay: 1s;
 }
 
 .card:nth-child(4).glow::before {
-	animation-delay: 6s;
+	animation-delay: 2s;
 }
 
 @keyframes swirl {
 	0% {
-		background-position: 0 0;
+		filter: hue-rotate(0deg) blur(20px);
+		opacity: 0.8;
 	}
-
-	50% {
-		background-position: 400% 0;
-	}
-
 	100% {
-		background-position: 0 0;
+		filter: hue-rotate(360deg) blur(20px);
 	}
 }
 
