@@ -1,0 +1,26 @@
+:root {
+	// https://coolors.co/0d1321-1d2d44-3e5c76-748cab-f0ebd8
+	--rich-black: #0d1321;
+	--prussian-blue: #1d2d44;
+	--paynes-gray: #3e5c76;
+	--silver-lake-blue: #748cab;
+	--eggshell: #f0ebd8;
+}
+
+html {
+	--bg-1: var(--rich-black);
+	--bg-2: var(--prussian-blue);
+	--bg-3: var(--paynes-gray);
+	--bg-4: var(--silver-lake-blue);
+	--txt-1: var(--eggshell);
+	--txt-2: var(--paynes-gray);
+	--brd-1: #e6fb04;
+	--brd-2: #ff6600;
+	--brd-3: #00ff66;
+	--brd-4: #00ffff;
+	--brd-5: #ff00ff;
+	--brd-6: #ff0099;
+	--brd-7: #6e0dd0;
+	--brd-8: #ff3300;
+	--brd-9: #099fff;
+}

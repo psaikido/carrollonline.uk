@@ -102,11 +102,9 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  flex-direction: column;
   flex-grow: 1;
   padding-block: 20px; }
   ul li {
-    width: 100%;
     padding-inline: 10px; }
 
 body {

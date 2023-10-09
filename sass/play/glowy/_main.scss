@@ -1,0 +1,86 @@
+*::before,
+*::after,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+	font-size: 1.5em;
+	color: var(--txt-1);
+	background-color: var(--bg-1);
+	// display: grid;
+	// align-items: center;
+	// justify-content: center;
+	// grid-template-columns: 1fr;
+	// grid-template-areas: 'main';
+}
+
+.wrap {
+	// grid-area: main;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	// z-index: 1;
+}
+
+.card {
+	position: relative;
+	margin: 10% auto 0;
+	width: 200px;
+	height: 300px;
+	text-align: center;
+	padding: 20px;
+	background: linear-gradient(0deg, var(--bg-1), var(--bg-3));
+	// background: black;
+	// z-index: 2;
+}
+
+.glow::before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	// background: var(--bg-3);
+	background: linear-gradient(45deg, var(--brd-1), var(--brd-2), var(--brd-3), var(--brd-4), var(--brd-5), var(--brd-6), var(--brd-7), var(--brd-8), var(--brd-9));
+	background-size: 400%;
+	width: calc(100% + 10px);
+	height: calc(100% + 10px);
+	z-index: -1;
+	animation: swirl 40s linear infinite;
+}
+
+.card:nth-child(2).glow::before {
+	animation-delay: 2s;
+}
+
+.card:nth-child(3).glow::before {
+	animation-delay: 4s;
+}
+
+.card:nth-child(4).glow::before {
+	animation-delay: 6s;
+}
+
+@keyframes swirl {
+	0% {
+		background-position: 0 0;
+	}
+
+	50% {
+		background-position: 400% 0;
+	}
+
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.glow::before {
+	filter: blur(20px);
+	opacity: 0.8;
+}

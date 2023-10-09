@@ -1,0 +1,86 @@
+:root {
+  --rich-black: #0d1321;
+  --prussian-blue: #1d2d44;
+  --paynes-gray: #3e5c76;
+  --silver-lake-blue: #748cab;
+  --eggshell: #f0ebd8; }
+
+html {
+  --bg-1: var(--rich-black);
+  --bg-2: var(--prussian-blue);
+  --bg-3: var(--paynes-gray);
+  --bg-4: var(--silver-lake-blue);
+  --txt-1: var(--eggshell);
+  --txt-2: var(--paynes-gray);
+  --brd-1: #e6fb04;
+  --brd-2: #ff6600;
+  --brd-3: #00ff66;
+  --brd-4: #00ffff;
+  --brd-5: #ff00ff;
+  --brd-6: #ff0099;
+  --brd-7: #6e0dd0;
+  --brd-8: #ff3300;
+  --brd-9: #099fff; }
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  font-size: 1.5em;
+  color: var(--txt-1);
+  background-color: var(--bg-1); }
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; }
+
+.card {
+  position: relative;
+  margin: 10% auto 0;
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(0deg, var(--bg-1), var(--bg-3)); }
+
+.glow::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background: linear-gradient(45deg, var(--brd-1), var(--brd-2), var(--brd-3), var(--brd-4), var(--brd-5), var(--brd-6), var(--brd-7), var(--brd-8), var(--brd-9));
+  background-size: 400%;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  z-index: -1;
+  animation: swirl 40s linear infinite; }
+
+.card:nth-child(2).glow::before {
+  animation-delay: 2s; }
+
+.card:nth-child(3).glow::before {
+  animation-delay: 4s; }
+
+.card:nth-child(4).glow::before {
+  animation-delay: 6s; }
+
+@keyframes swirl {
+  0% {
+    background-position: 0 0; }
+  50% {
+    background-position: 400% 0; }
+  100% {
+    background-position: 0 0; } }
+.glow::before {
+  filter: blur(20px);
+  opacity: 0.8; }
+
+/*# sourceMappingURL=glowy.css.map */
