@@ -1,18 +1,19 @@
 :root {
-  --raisin-black: #202030ff;
-  --english-violet: #39304aff;
-  --walnut-brown: #635c51ff;
-  --battleship-gray: #7d7461ff;
-  --khaki: #b0a990ff;
+  --charcoal: #222;
+  --selective-yellow: #f5b700;
+  --celestial-blue: #00a1e4;
+  --mexican-pink: #dc0073;
+  --chartreuse: #89fc00;
   --white: #eee; }
 
 html {
-  --bg-1: var(--raisin-black);
-  --bg-2: var(--english-violet);
-  --bg-3: var(--walnut-brown);
-  --bg-4: var(--battleship-gray);
-  --bg-5: var(--khaki);
-  --txt-1: var(--white);
+  --bg-1: var(--charcoal);
+  --bg-2: var(--selective-yellow);
+  --bg-3: var(--celestial-blue);
+  --bg-4: var(--mexican-pink);
+  --bg-5: var(--chartreuse);
+  --txt-light: var(--white);
+  --txt-dark: var(--charcoal);
   --brd-1: #e6fb04;
   --brd-2: #ff6600;
   --brd-3: #00ff66;
@@ -30,21 +31,29 @@ html {
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   min-height: 100vh;
   font-size: 1.5em;
-  color: var(--txt-1);
+  color: var(--txt-dark);
   background-color: var(--bg-1); }
 
 .wrap {
   height: 100%;
   display: grid;
   gap: 20px;
+  scroll-snap-type: y mandatory;
   grid-template-columns: 1fr;
   grid-template-rows: 60px repeat(4, calc(100vh - 60px));
   grid-template-areas: "nav" "one" "two" "three" "four"; }
-  .wrap nav {
-    grid-area: nav; }
+  .wrap nav.header {
+    grid-area: nav;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%; }
   .wrap .section.one {
     grid-area: one; }
   .wrap .section.two {
@@ -55,12 +64,17 @@ body {
     grid-area: four; }
 
 .section {
-  border: 1px solid red;
-  height: calc(100% - 60px);
-  overflow: auto; }
-  .section a:first-child {
-    margin-top: 60px;
-    display: block; }
+  height: calc(100vh - 60px);
+  padding-top: 60px;
+  scroll-snap-align: end;
+  position: relative;
+  z-index: -1; }
+  .section a.anchor {
+    display: block;
+    position: absolute;
+    top: -60px; }
+  .section h2 {
+    margin-left: 100px; }
 
 .section.one {
   background: var(--bg-2); }
@@ -74,22 +88,17 @@ body {
 .section.four {
   background: var(--bg-5); }
 
-nav {
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  height: 60px;
-  width: 100%; }
-  nav ul {
+nav.header {
+  display: grid;
+  background: var(--bg-1); }
+  nav.header ul {
     display: flex;
     justify-items: center;
     align-items: center;
     margin: 10px auto;
     gap: 20px;
     list-style: none; }
-    nav ul li {
-      border: 1px solid red; }
-    nav ul li a {
-      color: var(--txt-1); }
+    nav.header ul li a {
+      color: var(--txt-light); }
 
 /*# sourceMappingURL=sections.css.map */

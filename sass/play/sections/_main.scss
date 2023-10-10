@@ -6,10 +6,14 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
 	font-size: 1.5em;
-	color: var(--txt-1);
+	color: var(--txt-dark);
 	background-color: var(--bg-1);
 }
 
@@ -17,6 +21,7 @@ body {
 	height: 100%;
 	display: grid;
 	gap: 20px;
+	scroll-snap-type: y mandatory;
 	grid-template-columns: 1fr;
 	grid-template-rows: 60px repeat(4, calc(100vh - 60px));
 	grid-template-areas: 
@@ -26,8 +31,12 @@ body {
 		"three"
 		"four";
 
-	nav {
+	nav.header {
 		grid-area: nav;
+		position: fixed;
+		top: 0;
+		height: 60px;
+		width: 100%;
 	}
 
 	.section.one {
@@ -45,13 +54,20 @@ body {
 }
 
 .section {
-	border: 1px solid red;
-	height: calc(100% - 60px);
-	overflow: auto;
+	height: calc(100vh - 60px);
+	padding-top: 60px;
+	scroll-snap-align: end;
+	position: relative;
+	z-index: -1;
 
-	a:first-child {
-		margin-top: 60px;
+	a.anchor {
 		display: block;
+		position: absolute;
+		top: -60px;
+	}
+
+	h2 {
+		margin-left: 100px;
 	}
 }
 

@@ -1,20 +1,21 @@
 :root {
-	// https://coolors.co/202030-39304a-635c51-7d7461-b0a990
-	--raisin-black: #202030ff;
-	--english-violet: #39304aff;
-	--walnut-brown: #635c51ff;
-	--battleship-gray: #7d7461ff;
-	--khaki: #b0a990ff;
+	// https://coolors.co/f5b700-00a1e4-dc0073-89fc00
+	--charcoal: #222;
+	--selective-yellow: #f5b700;
+	--celestial-blue: #00a1e4;
+	--mexican-pink: #dc0073;
+	--chartreuse: #89fc00;
 	--white: #eee;
 }
 
 html {
-	--bg-1: var(--raisin-black);
-	--bg-2: var(--english-violet);
-	--bg-3: var(--walnut-brown);
-	--bg-4: var(--battleship-gray);
-	--bg-5: var(--khaki);
-	--txt-1: var(--white);
+	--bg-1: var(--charcoal);
+	--bg-2: var(--selective-yellow);
+	--bg-3: var(--celestial-blue);
+	--bg-4: var(--mexican-pink);
+	--bg-5: var(--chartreuse);
+	--txt-light: var(--white);
+	--txt-dark: var(--charcoal);
 	--brd-1: #e6fb04;
 	--brd-2: #ff6600;
 	--brd-3: #00ff66;
