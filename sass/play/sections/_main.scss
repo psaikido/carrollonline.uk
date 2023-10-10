@@ -1,0 +1,72 @@
+*::before,
+*::after,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+	font-size: 1.5em;
+	color: var(--txt-1);
+	background-color: var(--bg-1);
+}
+
+.wrap {
+	height: 100%;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 60px repeat(4, calc(100vh - 60px));
+	grid-template-areas: 
+		"nav"
+		"one"
+		"two"
+		"three"
+		"four";
+
+	nav {
+		grid-area: nav;
+	}
+
+	.section.one {
+		grid-area: one;
+	}
+	.section.two {
+		grid-area: two;
+	}
+	.section.three {
+		grid-area: three;
+	}
+	.section.four {
+		grid-area: four;
+	}
+}
+
+.section {
+	border: 1px solid red;
+	height: calc(100% - 60px);
+	overflow: auto;
+
+	a:first-child {
+		margin-top: 60px;
+		display: block;
+	}
+}
+
+.section.one {
+	background: var(--bg-2);
+}
+
+.section.two {
+	background: var(--bg-3);
+}
+
+.section.three {
+	background: var(--bg-4);
+}
+
+.section.four {
+	background: var(--bg-5);
+}
