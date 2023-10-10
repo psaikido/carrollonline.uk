@@ -1,5 +1,5 @@
 :root {
-  --charcoal: #222;
+  --charcoal: #222222ee;
   --selective-yellow: #f5b700;
   --celestial-blue: #00a1e4;
   --mexican-pink: #dc0073;
@@ -64,15 +64,15 @@ body {
     grid-area: four; }
 
 .section {
-  height: calc(100vh - 60px);
-  padding-top: 60px;
+  height: calc(50vh - 60px);
   scroll-snap-align: end;
   position: relative;
-  z-index: -1; }
+  z-index: -1;
+  margin-block: 10rem; }
   .section a.anchor {
     display: block;
     position: absolute;
-    top: -60px; }
+    top: -200px; }
   .section h2 {
     margin-left: 100px;
     font-size: 11em;
@@ -88,16 +88,33 @@ body {
     color: transparent; }
 
 .section.one {
-  background: var(--bg-2); }
+  --bg: var(--bg-2);
+  --skew-angle: -3deg; }
 
 .section.two {
-  background: var(--bg-3); }
+  --bg: var(--bg-3);
+  --skew-angle: 4deg; }
 
 .section.three {
-  background: var(--bg-4); }
+  --bg: var(--bg-4);
+  --skew-angle: -5deg; }
 
 .section.four {
-  background: var(--bg-5); }
+  --bg: var(--bg-5);
+  --skew-angle: 6deg; }
+
+.diagonal {
+  position: relative;
+  isolation: isolate; }
+
+.diagonal::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: var(--bg);
+  inset: 0;
+  transform: skewY(var(--skew-angle));
+  filter: blur(3px); }
 
 nav.header {
   display: grid;
