@@ -44,7 +44,6 @@ body {
   height: 100%;
   display: grid;
   gap: 20px;
-  scroll-snap-type: y mandatory;
   grid-template-columns: 1fr;
   grid-template-rows: 60px repeat(4, calc(100vh - 60px));
   grid-template-areas: "nav" "one" "two" "three" "four"; }
@@ -65,7 +64,6 @@ body {
 
 .section {
   height: calc(50vh - 60px);
-  scroll-snap-align: end;
   position: relative;
   z-index: -1;
   margin-block: 10rem; }
