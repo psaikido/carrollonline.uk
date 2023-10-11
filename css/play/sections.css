@@ -83,31 +83,36 @@ body {
     background-size: 100%, 10px 10px;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; }
+    color: transparent;
+    transform: rotate(var(--txt-tilt)); }
 
 .section.one {
   --bg: var(--bg-2);
   --chk-1: var(--bg-1);
   --chk-2: var(--bg-5);
-  --skew-angle: -3deg; }
+  --skew-angle: -3deg;
+  --txt-tilt: 2deg; }
 
 .section.two {
   --bg: var(--bg-3);
   --chk-1: var(--bg-1);
   --chk-2: var(--bg-4);
-  --skew-angle: 4deg; }
+  --skew-angle: 4deg;
+  --txt-tilt: -2deg; }
 
 .section.three {
   --bg: var(--bg-4);
   --chk-1: var(--bg-1);
   --chk-2: var(--bg-2);
-  --skew-angle: -5deg; }
+  --skew-angle: -5deg;
+  --txt-tilt: 2deg; }
 
 .section.four {
   --bg: var(--bg-5);
   --chk-1: var(--bg-2);
   --chk-2: var(--bg-4);
-  --skew-angle: 6deg; }
+  --skew-angle: 6deg;
+  --txt-tilt: -2deg; }
 
 .diagonal {
   position: relative;
