@@ -58,15 +58,12 @@ main {
 		left: 10px;
 		width: 20px;
 		height: 20px;
-
-		@media (prefers-color-scheme: light) {
-			background: var(--background);
-		}
-
-		@media (prefers-color-scheme: dark) {
-			background: var(--text);
-		}
+		background: var(--background);
 	}
+}
+
+body.dark-mode .img-mode {
+	background: var(--text);
 }
 
 h1, h2, h3 {
