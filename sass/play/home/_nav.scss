@@ -71,6 +71,8 @@ ul {
 	background-color: var(--bg-5);
 	border: var(--sizing) solid var(--bg-4);
 	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
@@ -78,8 +80,13 @@ ul {
 	padding-block: 20px;
 
 	li {
+		flex-basis: 20%;
 		padding-inline: 10px;
 	}
+}
+
+ul::before {
+	background: red;
 }
 
 body {
