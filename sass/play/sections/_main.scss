@@ -72,10 +72,17 @@ body {
 		text-align: center;
 		font-weight: 800;
 		width: 60%;
-		background-image: url(https://unsplash.it/800);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-clip: text;
+		// background-image: url(https://unsplash.it/800);
+		// background-repeat: no-repeat;
+		background-image: 
+			radial-gradient(#0000, #000 75%),
+			repeating-conic-gradient(
+				from 35deg, 
+				var(--chk-1) 0deg 90deg, 
+				var(--chk-2) 90deg 180deg
+			);
+		background-size: 100%, 10px 10px;
+		// background-size: cover;
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: transparent;
@@ -84,21 +91,29 @@ body {
 
 .section.one {
 	--bg: var(--bg-2);
+	--chk-1: var(--bg-1);
+	--chk-2: var(--bg-5);
 	--skew-angle: -3deg;
 }
 
 .section.two {
 	--bg: var(--bg-3);
+	--chk-1: var(--bg-1);
+	--chk-2: var(--bg-4);
 	--skew-angle: 4deg;
 }
 
 .section.three {
 	--bg: var(--bg-4);
+	--chk-1: var(--bg-1);
+	--chk-2: var(--bg-2);
 	--skew-angle: -5deg;
 }
 
 .section.four {
 	--bg: var(--bg-5);
+	--chk-1: var(--bg-2);
+	--chk-2: var(--bg-4);
 	--skew-angle: 6deg;
 }
 
