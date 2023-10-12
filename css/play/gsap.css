@@ -77,8 +77,9 @@ a:focus,
   color: var(--accent); }
 
 section {
+  height: 100vh;
   margin-block: 3rem; }
   section p.note {
     font-size: var(--fs--1); }
 
-/*# sourceMappingURL=powell-1.css.map */
+/*# sourceMappingURL=gsap.css.map */
