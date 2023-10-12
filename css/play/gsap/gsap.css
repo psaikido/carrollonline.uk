@@ -57,8 +57,7 @@ body.dark-mode .img-mode {
   background: var(--text); }
 
 h1, h2, h3 {
-  color: var(--primary);
-  text-wrap: balance; }
+  color: var(--primary); }
 
 h1 {
   font-size: var(--fs-4); }
