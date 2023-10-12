@@ -142,7 +142,7 @@ body {
   font-family: 'Old Standard TT', serif;
   font-size: 1em;
   color: var(--dark);
-  background-image: url("../graphics/paper-1.jpg");
+  background-image: url("../../graphics/paper-1.jpg");
   background-color: var(--paper);
   background-position: center; }
 
@@ -214,7 +214,7 @@ body {
     rotate: 360deg; } }
 .box {
   border: 3px solid var(--border-major);
-  background-image: url("../graphics/paper-1.jpg");
+  background-image: url("../../graphics/paper-1.jpg");
   background-position: center;
   background-size: 100%;
   margin: 10px; }
