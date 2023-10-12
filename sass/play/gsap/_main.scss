@@ -1,0 +1,62 @@
+body {
+	font-family: var(--ff-base), serif;
+	font-family: var(--ff-accent), sans-serif;
+	font-size: var(--fs-1);
+	line-height: 1.6;
+	color: var(--text);
+	background: var(--background);
+}
+
+main {
+	width: min(100% - 4rem, 55ch);
+	margin-inline: auto;
+
+	.img-mode {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 20px;
+		height: 20px;
+		background: var(--background);
+	}
+}
+
+body.dark-mode .img-mode {
+	background: var(--text);
+}
+
+h1, h2, h3 {
+	color: var(--primary);
+	text-wrap: balance;
+}
+
+h1 {
+	font-size: var(--fs-4);
+}
+
+h2 {
+	font-size: var(--fs-3);
+}
+
+h3 {
+	font-size: var(--fs-2);
+}
+
+a {
+	color: var(--secondary);
+}
+
+a:hover,
+a:focus,
+::marker {
+	color: var(--accent);
+}
+
+section {
+	height: 100vh;
+	margin-block: 3rem;
+
+	p.note {
+		font-size: var(--fs--1);
+	}
+}

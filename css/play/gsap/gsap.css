@@ -27,7 +27,12 @@
   box-sizing: border-box; }
 
 html {
-  color-scheme: light dark; }
+  color-scheme: light dark;
+  scroll-behavior: smooth; }
+
+img {
+  max-width: 100%;
+  display: block; }
 
 body {
   font-family: var(--ff-base), serif;
@@ -36,10 +41,6 @@ body {
   line-height: 1.6;
   color: var(--text);
   background: var(--background); }
-
-img {
-  max-width: 100%;
-  display: block; }
 
 main {
   width: min(100% - 4rem, 55ch);
