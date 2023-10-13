@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" value="Hugh Carroll https://hugle.uk">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/play/tracking/tracking.css" />
+
+	<script>
+
+		document.addEventListener("mousemove", (e) => {
+			rotateElement(e);
+		});
+
+		function rotateElement(event) {
+			const pre = document.querySelector("pre");
+
+			const x = event.clientX;
+			const y = event.clientY;
+			const middleX = window.innerWidth / 2;
+			const middleY = window.innerHeight / 2;
+			const offsetX = ((x - middleX) / middleX) * 45;
+			const offsetY = ((y - middleY) / middleY) * 45;
+
+			pre.style.setProperty('--rotateX', -1 * offsetY + 'deg');
+			pre.style.setProperty('--rotateY', offsetX + 'deg');
+		}
+	</script>
+
+</head>
+<body>
+	<a href="home.html" style="position: absolute; top: 0; left: 0; font-size: 1.5rem;">home</a>
+
+	<pre contenteditable class="language-css" tabindex="0"><code class="language-css"><span class="token selector">.awesome-layouts</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+	<!-- css only version -->
+	<!-- <div class="pre-container"> -->
+	<!-- 	<div></div> -->
+	<!-- 	<div></div> -->
+	<!-- 	<div></div> -->
+	<!-- 	<div></div> -->
+	<!-- 	<div></div> -->
+	<!-- 	<div></div> -->
+	<!-- 	<div></div> -->
+	<!-- 	<div></div> -->
+	<!-- 	<div></div> -->
+	<!---->
+	<!-- <pre contenteditable class="language-css" tabindex="0"><code class="language-css"><span class="token selector">.awesome-layouts</span> <span class="token punctuation">{</span> -->
+	<!-- 	<span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span> -->
+	<!-- <span class="token punctuation">}</span></code></pre> -->
+	<!-- </div> -->
+</body>
+</html>
+

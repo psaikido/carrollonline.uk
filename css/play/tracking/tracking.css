@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light dark; }
+
+img {
+  width: 100%;
+  display: block; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+:root {
+  --ff-base: 'Merriweather', serif;
+  --ff-accent: 'Work Sans', sans-serif;
+  /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --fs--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --fs-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --fs-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --fs-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --fs-3: clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem);
+  --fs-4: clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem);
+  --fs-5: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
+  --text: #aaa4a4;
+  --background: #0e1004;
+  --pink: hsl(338, 70%, 55%);
+  --teal: hsl(183, 70%, 62%);
+  --white: hsl(334, 7%, 95%); }
+
+body {
+  background-color: var(--background);
+  display: grid;
+  place-items: center;
+  min-block-size: 100dvh; }
+
+pre {
+  --selector: var(--pink);
+  --property: var(--teal);
+  --punctuation: var(--white);
+  --undefined: var(--white);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--undefined);
+  background: #0a0f1a;
+  padding: 2rem;
+  border-radius: 1rem;
+  border-color: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(5000px) rotateX(var(--rotateX)) rotateY(var(--rotateY)); }
+
+pre > * {
+  text-shadow: 0 0 0.3rem currentColor; }
+
+.selector {
+  color: var(--selector); }
+
+.property {
+  color: var(--property); }
+
+.punctuation {
+  color: var(--punctuation); }
+
+pre::before,
+pre::after {
+  content: '';
+  position: absolute;
+  border-radius: inherit; }
+
+pre::before {
+  inset: 0.75rem;
+  background: black;
+  transform: translateZ(-48px);
+  filter: blur(5px);
+  opacity: 0.5; }
+
+pre::after {
+  inset: -1rem;
+  background: linear-gradient(45deg, red, blue);
+  transform: translateZ(-50px); }
+
+/* css only version */
+
+/*# sourceMappingURL=tracking.css.map */
