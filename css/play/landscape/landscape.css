@@ -48,7 +48,8 @@ body {
 
 .scene {
   position: relative;
-  transform-style: preserve-3d; }
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out; }
 @keyframes sceneRotate {
   to {
     transform: rotateY(360deg); } }
@@ -62,18 +63,18 @@ body {
   top: 1em;
   transform-style: preserve-3d; }
 
-.sign,
-.kites {
-  transition: transform 1s ease-in-out; }
-
 .sign {
   position: absolute;
   top: -100px;
   left: 0;
   transform-style: preserve-3d;
-  transform: translateZ(100px);
-  border: 1px solid #ff0;
   padding: 1rem; }
+  .sign.nav-kites {
+    transform: translateX(-250px) translateZ(200px);
+    border: 1px solid #ff0; }
+  .sign.nav-poems {
+    transform: translateX(50px) translateZ(200px);
+    border: 1px solid #00f; }
 
 .kites {
   position: absolute;
@@ -83,6 +84,18 @@ body {
   transform: translateX(-400px) translateZ(-600px);
   border: 1px solid #ff0; }
   .kites ul {
+    font-size: 1rem;
+    list-style: none;
+    padding: 1rem; }
+
+.poems {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  transform-style: preserve-3d;
+  transform: translateX(400px) translateZ(-600px);
+  border: 1px solid #00f; }
+  .poems ul {
     font-size: 1rem;
     list-style: none;
     padding: 1rem; }

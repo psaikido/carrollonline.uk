@@ -17,6 +17,7 @@ body {
 .scene {
 	position: relative;
 	transform-style: preserve-3d;
+	transition: transform 1s ease-in-out;
 	// animation: sceneRotate var(--rotate-speed) infinite linear;
 
 	@keyframes sceneRotate {
@@ -41,20 +42,22 @@ body {
 	transform-style: preserve-3d;
 }
 
-.sign,
-.kites {
-	transition: transform 1s ease-in-out;
-}
-
 .sign {
 	position: absolute;
 	top: -100px;
 	left: 0;
-
 	transform-style: preserve-3d;
-	transform: translateZ(100px);
-	border: 1px solid #ff0;
 	padding: 1rem;
+
+	&.nav-kites {
+		transform: translateX(-250px) translateZ(200px);
+		border: 1px solid #ff0;
+	}
+
+	&.nav-poems {
+		transform: translateX(50px) translateZ(200px);
+		border: 1px solid #00f;
+	}
 }
 
 .kites {
@@ -64,6 +67,22 @@ body {
 	transform-style: preserve-3d;
 	transform: translateX(-400px) translateZ(-600px);
 	border: 1px solid #ff0;
+
+	ul {
+		font-size: 1rem;
+		list-style: none;
+		padding: 1rem;
+	}
+
+}
+
+.poems {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	transform-style: preserve-3d;
+	transform: translateX(400px) translateZ(-600px);
+	border: 1px solid #00f;
 
 	ul {
 		font-size: 1rem;
