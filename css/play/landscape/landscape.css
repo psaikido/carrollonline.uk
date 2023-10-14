@@ -32,6 +32,9 @@ body {
   --teal: hsl(183, 70%, 62%);
   --white: hsl(334, 7%, 95%); }
 
+:root {
+  --rotate-speed: 40s; }
+
 body {
   font-size: 75px;
   min-height: 100vh;
@@ -45,8 +48,7 @@ body {
 
 .scene {
   position: relative;
-  transform-style: preserve-3d;
-  animation: sceneRotate var(--rotate-speed) infinite linear; }
+  transform-style: preserve-3d; }
 @keyframes sceneRotate {
   to {
     transform: rotateY(360deg); } }
@@ -59,5 +61,30 @@ body {
   transform: translate(-50%, -50%) rotateX(90deg);
   top: 1em;
   transform-style: preserve-3d; }
+
+.sign,
+.kites {
+  transition: transform 1s ease-in-out; }
+
+.sign {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  transform-style: preserve-3d;
+  transform: translateZ(100px);
+  border: 1px solid #ff0;
+  padding: 1rem; }
+
+.kites {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  transform-style: preserve-3d;
+  transform: translateX(-400px) translateZ(-600px);
+  border: 1px solid #ff0; }
+  .kites ul {
+    font-size: 1rem;
+    list-style: none;
+    padding: 1rem; }
 
 /*# sourceMappingURL=landscape.css.map */
