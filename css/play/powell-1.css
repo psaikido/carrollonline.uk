@@ -29,6 +29,13 @@
 html {
   color-scheme: light dark; }
 
+a.home {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #aaa; }
+
 body {
   font-family: var(--ff-base), serif;
   font-family: var(--ff-accent), sans-serif;

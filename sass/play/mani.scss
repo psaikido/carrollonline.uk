@@ -8,6 +8,14 @@ body {
   perspective-origin: 50% calc(50% - 150px);
 }
 
+a.home {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-size: 1.5rem;
+	color: #aaa;
+}
+
 .scene {
   position: relative;
   transform-style: preserve-3d;

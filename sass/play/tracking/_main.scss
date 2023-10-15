@@ -5,6 +5,14 @@ body {
 	min-block-size: 100dvh;
 }
 
+a.home {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-size: 1.5rem;
+	color: #aaa;
+}
+
 pre {
 	--selector: var(--pink);
   --property: var(--teal);

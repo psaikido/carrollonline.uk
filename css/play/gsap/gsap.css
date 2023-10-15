@@ -42,6 +42,13 @@ body {
   color: var(--text);
   background: var(--background); }
 
+a.home {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #aaa; }
+
 main {
   width: min(100% - 4rem, 55ch);
   margin-inline: auto; }

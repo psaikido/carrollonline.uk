@@ -2,6 +2,14 @@
 	--rotate-speed: 40s;
 }
 
+a.home {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-size: 1.5rem;
+	color: #aaa;
+}
+
 body {
 	font-size: 75px;
 	min-height: 100vh;
