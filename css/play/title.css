@@ -30,7 +30,7 @@ img {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: drift 50s ease-in-out infinite alternate; }
+    animation: drift 50s ease-out infinite alternate; }
 @keyframes drift {
   to {
     background-position-x: 0px; } }
