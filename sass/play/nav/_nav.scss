@@ -1,0 +1,164 @@
+.main-nav {
+	position: relative;
+	font-family: 'Cabin', sans-serif;
+	text-align: center;
+	cursor: pointer;
+}
+
+.sidebar-menu {
+	// display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 511px;
+	background-color: var(--bkg-main);
+	padding: 0px 10px;
+	z-index: 6;
+	border: 1px solid var(--border-main);
+
+	button.heading.top {
+		font-family: Grandstander, sans-serif;
+		border: none;
+		@include border-fancy;
+		background-color: transparent;
+		color: var(--text-accent);
+		font-size: 1.6em;
+		height: 50px;
+	}
+
+	ul {
+		list-style-type: none;
+		text-align: left;
+
+		li a,
+		li a:visited {
+			color: var(--link-main);
+			text-decoration: underline;
+			line-height: 1.2rem;
+		}
+
+		li a:hover {
+			color: var(--text-accent);
+		}
+	}
+}
+
+.sidebar-menu.little ul.little,
+.sidebar-menu.big ul.nests {
+	padding-left: 5px;
+
+	li {
+		text-align: left;
+		list-style-type: none;
+		line-height: 2rem;
+	}
+
+	li.level1-child a {
+		margin-left: 6px;
+	}
+
+	li.level1-parent .heading,
+	.sub-heading {
+		font-family: Grandstander;
+		font-size: 1.2em;
+		color: var(--text-accent);
+		text-decoration: underline;
+	}
+
+	li.level1-parent {
+		margin-left: 6px;
+
+		button.heading {
+			background-image: url(../../../graphics/down-arrow-svgrepo-com.svg);
+			background-repeat: no-repeat;
+			background-size: 20px;
+			background-color: transparent;
+			background-position: 0 0;
+			border: none;
+			padding-inline: 27px;
+		}
+
+	}
+
+	ul.submenu {
+		padding: 0;
+
+		li {
+			margin-bottom: 8px;
+		}
+
+		li:hover {
+			color: var(--text-accent);
+		}
+	}
+}
+
+.sidebar-menu.big {
+	width: 90%;
+	margin-left: 15px;
+	height: 700px;
+	border: 1px solid var(--blue);
+	background: var(--bkg-main);
+
+	.ul-blocks {
+		display: flex;
+
+		ul.solos {
+			width: 16%;
+			padding-left: 8px;
+		}
+
+		ul.nests {
+			width: 84%;
+			display: grid;
+			grid-auto-flow: column;
+			grid-auto-columns: 1fr;
+			position: relative;
+
+			li:hover {
+				border: none;
+			}
+
+			li.level1-parent {
+				text-align: center;
+
+				.icon img {
+					width: 50px;
+					margin: 0 auto;
+				}
+			}
+
+			li.level1-parent.active {
+				border-top: 1px solid var(--text-accent);
+			}
+
+			ul.level1-parent-dropdown-big {
+				display:none;
+				position: absolute;
+				top: 130px;
+				left: 27px;
+			}
+
+			li.level2-parent {
+				float: left;
+				max-width: 256px;
+				border-left: 1px solid transparent; 
+				border-image: linear-gradient(to bottom, var(--bkg-minor), var(--blue), var(--bkg-minor));
+				border-image-slice: 1;
+				padding-left: 8px;
+				margin-right: 40px;
+
+				.sub-heading {
+					color: var(--text-main);
+					text-decoration: none;
+				}
+			}
+
+			/* galleries sub items need to be further right */
+			li.level1-parent:nth-child(4) .level1-parent-dropdown-big {
+				left: 70%;
+			}
+		}
+	}
+}
+

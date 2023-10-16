@@ -1,0 +1,200 @@
+/*
+html body {
+    @include screen-width('xsmall') {
+        background-color: white;
+    }
+
+    @include screen-width('small') {
+        background-color: green;
+        margin-inline: auto;
+    }
+
+    @include screen-width('medium') {
+        background-color: blue;
+    }
+
+    @include screen-width('large') {
+        background-color: pink;
+    }
+
+    @include screen-width('desktop') {
+        background-color: limegreen;
+    }
+}
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Schoolbell&display=swap");
+:root {
+  --dark-major: hsl(0, 0%, 0%);
+  --dark-minor: hsl(0, 0%, 20%);
+  --light-grey: hsl(0, 0%, 85%);
+  --mid-grey: hsl(38 54% 83%);
+  --blue: hsl(218, 85%, 55%);
+  --pink: hsl(331, 64%, 52%);
+  --white: hsl(0, 0%, 100%);
+  --green: hsl(110, 65%, 48%);
+  --yellow: hsl(51, 100%, 63%); }
+
+html {
+  --bkg-main: hsl(45, 7%, 11%);
+  --bkg-minor: hsl(45, 7%, 21%);
+  --bk-text-main: hsl(205 200% 200%);
+  --text-main: hsl(38 54% 83%);
+  --text-minor: hsl(0, 0%, 20%);
+  --text-accent:hsl(30 85% 55%);
+  --text-mute: hsl(0, 0%, 47%);
+  --link-main: var(--blue);
+  --border-main:hsl(194, 14%, 40%); }
+  html.light {
+    --bkg-main: var(--light-grey);
+    --bkg-minor: hsl(0, 0%, 73%);
+    --text-main: var(--dark-minor);
+    --text-accent:var(--dark-minor);
+    --link-main: var(--blue); }
+  html.print {
+    --bkg-main: var(--white);
+    --bkg-minor: var(--white);
+    --text-main: hsl(0, 0%, 0%);
+    --text-accent:var(--dark-minor);
+    --link-main: var(--blue); }
+
+body {
+  color: var(--text-main);
+  background-color: var(--bkg-minor);
+  font-size: 1rem;
+  letter-spacing: .12rem;
+  line-height: 1.9rem; }
+  body main {
+    background-color: var(--bkg-main); }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    color: var(--text-accent); }
+  body button .button-text {
+    color: var(--white); }
+  body a, body a:hover, body a:focus {
+    font-size: 1rem; }
+
+.main-nav {
+  position: relative;
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+  cursor: pointer; }
+
+.sidebar-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 511px;
+  background-color: var(--bkg-main);
+  padding: 0px 10px;
+  z-index: 6;
+  border: 1px solid var(--border-main); }
+  .sidebar-menu button.heading.top {
+    font-family: Grandstander, sans-serif;
+    border: none;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, var(--bkg-main), var(--blue), var(--bkg-main));
+    border-image-slice: 1;
+    background-color: transparent;
+    color: var(--text-accent);
+    font-size: 1.6em;
+    height: 50px; }
+  .sidebar-menu ul {
+    list-style-type: none;
+    text-align: left; }
+    .sidebar-menu ul li a,
+    .sidebar-menu ul li a:visited {
+      color: var(--link-main);
+      text-decoration: underline;
+      line-height: 1.2rem; }
+    .sidebar-menu ul li a:hover {
+      color: var(--text-accent); }
+
+.sidebar-menu.little ul.little,
+.sidebar-menu.big ul.nests {
+  padding-left: 5px; }
+  .sidebar-menu.little ul.little li,
+  .sidebar-menu.big ul.nests li {
+    text-align: left;
+    list-style-type: none;
+    line-height: 2rem; }
+  .sidebar-menu.little ul.little li.level1-child a,
+  .sidebar-menu.big ul.nests li.level1-child a {
+    margin-left: 6px; }
+  .sidebar-menu.little ul.little li.level1-parent .heading,
+  .sidebar-menu.little ul.little .sub-heading,
+  .sidebar-menu.big ul.nests li.level1-parent .heading,
+  .sidebar-menu.big ul.nests .sub-heading {
+    font-family: Grandstander;
+    font-size: 1.2em;
+    color: var(--text-accent);
+    text-decoration: underline; }
+  .sidebar-menu.little ul.little li.level1-parent,
+  .sidebar-menu.big ul.nests li.level1-parent {
+    margin-left: 6px; }
+    .sidebar-menu.little ul.little li.level1-parent button.heading,
+    .sidebar-menu.big ul.nests li.level1-parent button.heading {
+      background-image: url(../../../graphics/down-arrow-svgrepo-com.svg);
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-color: transparent;
+      background-position: 0 0;
+      border: none;
+      padding-inline: 27px; }
+  .sidebar-menu.little ul.little ul.submenu,
+  .sidebar-menu.big ul.nests ul.submenu {
+    padding: 0; }
+    .sidebar-menu.little ul.little ul.submenu li,
+    .sidebar-menu.big ul.nests ul.submenu li {
+      margin-bottom: 8px; }
+    .sidebar-menu.little ul.little ul.submenu li:hover,
+    .sidebar-menu.big ul.nests ul.submenu li:hover {
+      color: var(--text-accent); }
+
+.sidebar-menu.big {
+  width: 90%;
+  margin-left: 15px;
+  height: 700px;
+  border: 1px solid var(--blue);
+  background: var(--bkg-main); }
+  .sidebar-menu.big .ul-blocks {
+    display: flex; }
+    .sidebar-menu.big .ul-blocks ul.solos {
+      width: 16%;
+      padding-left: 8px; }
+    .sidebar-menu.big .ul-blocks ul.nests {
+      width: 84%;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      position: relative;
+      /* galleries sub items need to be further right */ }
+      .sidebar-menu.big .ul-blocks ul.nests li:hover {
+        border: none; }
+      .sidebar-menu.big .ul-blocks ul.nests li.level1-parent {
+        text-align: center; }
+        .sidebar-menu.big .ul-blocks ul.nests li.level1-parent .icon img {
+          width: 50px;
+          margin: 0 auto; }
+      .sidebar-menu.big .ul-blocks ul.nests li.level1-parent.active {
+        border-top: 1px solid var(--text-accent); }
+      .sidebar-menu.big .ul-blocks ul.nests ul.level1-parent-dropdown-big {
+        display: none;
+        position: absolute;
+        top: 130px;
+        left: 27px; }
+      .sidebar-menu.big .ul-blocks ul.nests li.level2-parent {
+        float: left;
+        max-width: 256px;
+        border-left: 1px solid transparent;
+        border-image: linear-gradient(to bottom, var(--bkg-minor), var(--blue), var(--bkg-minor));
+        border-image-slice: 1;
+        padding-left: 8px;
+        margin-right: 40px; }
+        .sidebar-menu.big .ul-blocks ul.nests li.level2-parent .sub-heading {
+          color: var(--text-main);
+          text-decoration: none; }
+      .sidebar-menu.big .ul-blocks ul.nests li.level1-parent:nth-child(4) .level1-parent-dropdown-big {
+        left: 70%; }
+
+/*# sourceMappingURL=styles.css.map */
